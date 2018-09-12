@@ -22,6 +22,7 @@
 //  SOFTWARE.
 
 import UIKit
+import LLDebugTool
 
 class LLog: NSObject {
     
