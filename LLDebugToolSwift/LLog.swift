@@ -24,7 +24,7 @@
 import UIKit
 import LLDebugTool
 
-class LLog: NSObject {
+public class LLog: NSObject {
     
     public static func log(message : String? , file : String = #file , function : String = #function , lineNumber : Int = #line) {
         #if DEBUG
