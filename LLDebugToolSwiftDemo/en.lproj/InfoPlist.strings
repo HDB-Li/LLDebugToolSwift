@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  LLDebugToolSwiftDemo
+
+  Created by Li on 2018/9/13.
+  
+*/
+
+NSPhotoLibraryUsageDescription = "Only for demo display. If you apply for photo album permission in your project, screenshot will be stored in photo album at the same time.";
+NSPhotoLibraryAddUsageDescription = "Only for demo display. If you apply for photo album permission in your project, screenshot will be stored in photo album at the same time";

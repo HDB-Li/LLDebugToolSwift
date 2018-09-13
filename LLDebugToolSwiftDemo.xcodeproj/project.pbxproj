@@ -16,6 +16,14 @@
 		364A05B5214917E70056719F /* LLDebugToolSwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A05B4214917E70056719F /* LLDebugToolSwiftDemoTests.swift */; };
 		364A05C0214917E80056719F /* LLDebugToolSwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A05BF214917E80056719F /* LLDebugToolSwiftDemoUITests.swift */; };
 		364A05D2214922EF0056719F /* LLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A05D1214922EF0056719F /* LLog.swift */; };
+		367620EF214A63B500F433EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 367620F1214A63B500F433EE /* InfoPlist.strings */; };
+		367620F5214A648200F433EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 367620F7214A648200F433EE /* Localizable.strings */; };
+		367620FB214A6D6400F433EE /* BaseTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367620FA214A6D6400F433EE /* BaseTestViewController.swift */; };
+		367620FD214A6D8700F433EE /* TestColorStyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367620FC214A6D8700F433EE /* TestColorStyleViewController.swift */; };
+		367620FF214A6D9400F433EE /* TestCrashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367620FE214A6D9400F433EE /* TestCrashViewController.swift */; };
+		36762101214A6D9F00F433EE /* TestLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36762100214A6D9F00F433EE /* TestLogViewController.swift */; };
+		36762103214A6DA800F433EE /* TestNetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36762102214A6DA800F433EE /* TestNetworkViewController.swift */; };
+		36762105214A6DB300F433EE /* TestWindowStyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36762104214A6DB300F433EE /* TestWindowStyleViewController.swift */; };
 		75C3C7BAEB5DA6775A13824C /* Pods_LLDebugToolSwiftDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3780C4404350A00107BAAD /* Pods_LLDebugToolSwiftDemoTests.framework */; };
 		9B3FB081B8AD3B63B74EAB84 /* Pods_LLDebugToolSwiftDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48CCDFFC351EDFC7025E3FFD /* Pods_LLDebugToolSwiftDemoUITests.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +62,18 @@
 		364A05BF214917E80056719F /* LLDebugToolSwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLDebugToolSwiftDemoUITests.swift; sourceTree = "<group>"; };
 		364A05C1214917E80056719F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		364A05D1214922EF0056719F /* LLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLog.swift; sourceTree = "<group>"; };
+		367620F0214A63B500F433EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		367620F2214A647C00F433EE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		367620F3214A647C00F433EE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		367620F4214A647C00F433EE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		367620F6214A648200F433EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		367620F8214A648400F433EE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		367620FA214A6D6400F433EE /* BaseTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestViewController.swift; sourceTree = "<group>"; };
+		367620FC214A6D8700F433EE /* TestColorStyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestColorStyleViewController.swift; sourceTree = "<group>"; };
+		367620FE214A6D9400F433EE /* TestCrashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCrashViewController.swift; sourceTree = "<group>"; };
+		36762100214A6D9F00F433EE /* TestLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLogViewController.swift; sourceTree = "<group>"; };
+		36762102214A6DA800F433EE /* TestNetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkViewController.swift; sourceTree = "<group>"; };
+		36762104214A6DB300F433EE /* TestWindowStyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWindowStyleViewController.swift; sourceTree = "<group>"; };
 		48CCDFFC351EDFC7025E3FFD /* Pods_LLDebugToolSwiftDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LLDebugToolSwiftDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB594A6FA49274F4506B10D /* Pods-LLDebugToolSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLDebugToolSwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LLDebugToolSwiftDemo/Pods-LLDebugToolSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		6CB7EDE77CABE52E9125F0D6 /* Pods-LLDebugToolSwiftDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLDebugToolSwiftDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLDebugToolSwiftDemoTests/Pods-LLDebugToolSwiftDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,12 +137,15 @@
 		364A059E214917E70056719F /* LLDebugToolSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				367620F9214A6D5500F433EE /* DemoViewControllers */,
 				364A059F214917E70056719F /* AppDelegate.swift */,
 				364A05A1214917E70056719F /* ViewController.swift */,
 				364A05A3214917E70056719F /* Main.storyboard */,
 				364A05A6214917E70056719F /* Assets.xcassets */,
 				364A05A8214917E70056719F /* LaunchScreen.storyboard */,
 				364A05AB214917E70056719F /* Info.plist */,
+				367620F7214A648200F433EE /* Localizable.strings */,
+				367620F1214A63B500F433EE /* InfoPlist.strings */,
 			);
 			path = LLDebugToolSwiftDemo;
 			sourceTree = "<group>";
@@ -151,6 +174,19 @@
 				364A05D1214922EF0056719F /* LLog.swift */,
 			);
 			path = LLDebugToolSwift;
+			sourceTree = "<group>";
+		};
+		367620F9214A6D5500F433EE /* DemoViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				367620FA214A6D6400F433EE /* BaseTestViewController.swift */,
+				367620FC214A6D8700F433EE /* TestColorStyleViewController.swift */,
+				367620FE214A6D9400F433EE /* TestCrashViewController.swift */,
+				36762100214A6D9F00F433EE /* TestLogViewController.swift */,
+				36762102214A6DA800F433EE /* TestNetworkViewController.swift */,
+				36762104214A6DB300F433EE /* TestWindowStyleViewController.swift */,
+			);
+			path = DemoViewControllers;
 			sourceTree = "<group>";
 		};
 		493A4988A99CBC4D81443B01 /* Frameworks */ = {
@@ -267,6 +303,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 364A0593214917E70056719F;
 			productRefGroup = 364A059D214917E70056719F /* Products */;
@@ -286,8 +323,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				364A05AA214917E70056719F /* LaunchScreen.storyboard in Resources */,
+				367620F5214A648200F433EE /* Localizable.strings in Resources */,
 				364A05A7214917E70056719F /* Assets.xcassets in Resources */,
 				364A05A5214917E70056719F /* Main.storyboard in Resources */,
+				367620EF214A63B500F433EE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,7 +468,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				367620FF214A6D9400F433EE /* TestCrashViewController.swift in Sources */,
+				36762105214A6DB300F433EE /* TestWindowStyleViewController.swift in Sources */,
+				367620FD214A6D8700F433EE /* TestColorStyleViewController.swift in Sources */,
+				36762101214A6D9F00F433EE /* TestLogViewController.swift in Sources */,
+				36762103214A6DA800F433EE /* TestNetworkViewController.swift in Sources */,
 				364A05D2214922EF0056719F /* LLog.swift in Sources */,
+				367620FB214A6D6400F433EE /* BaseTestViewController.swift in Sources */,
 				364A05A2214917E70056719F /* ViewController.swift in Sources */,
 				364A05A0214917E70056719F /* AppDelegate.swift in Sources */,
 			);
@@ -471,6 +516,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				364A05A4214917E70056719F /* Base */,
+				367620F2214A647C00F433EE /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -479,8 +525,27 @@
 			isa = PBXVariantGroup;
 			children = (
 				364A05A9214917E70056719F /* Base */,
+				367620F3214A647C00F433EE /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		367620F1214A63B500F433EE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				367620F0214A63B500F433EE /* en */,
+				367620F4214A647C00F433EE /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		367620F7214A648200F433EE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				367620F6214A648200F433EE /* en */,
+				367620F8214A648400F433EE /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -490,6 +555,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -550,6 +616,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -607,11 +674,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LLDebugToolSwiftDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = myCompany.LLDebugToolSwiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = myCompany.HDB.LLDebugToolSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -625,11 +693,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LLDebugToolSwiftDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = myCompany.LLDebugToolSwiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = myCompany.HDB.LLDebugToolSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

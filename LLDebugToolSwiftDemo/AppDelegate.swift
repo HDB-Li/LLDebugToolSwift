@@ -1,11 +1,29 @@
 //
 //  AppDelegate.swift
-//  LLDebugToolSwiftDemo
 //
-//  Created by admin10000 on 2018/9/12.
+//  Copyright (c) 2018 LLDebugTool Software Foundation (https://github.com/HDB-Li/LLDebugToolSwift)
 //
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
 
 import UIKit
+
+import LLDebugTool
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +32,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //####################### Color Style #######################//
+        // Uncomment one of the following lines to change the color configuration.
+        // LLConfig.shared().colorStyle = .system
+        // LLConfig.shared().configBackgroundColor(.orange, textColor: .white, statusBarStyle: .default)
+        
+        //####################### User Identity #######################//
+        // Use this line to tag user. More config please see "LLConfig.h".
+        LLConfig.shared().userIdentity = "Miss L";
+        
+        //####################### Window Style #######################//
+        // Uncomment one of the following lines to change the window style.
+        // LLConfig.shared().windowStyle = .netBar
+        
+        //####################### Features #######################//
+        // Uncomment this line to change the available features.
+        // LLConfig.shared().availables = .noneAppInfo
+        
+        // ####################### Start LLDebugTool #######################//
+        // Use this line to start working.
+        LLDebugTool.shared().startWorking()
+        
         return true
     }
 
