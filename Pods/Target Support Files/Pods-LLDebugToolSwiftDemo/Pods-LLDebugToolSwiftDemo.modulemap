@@ -1,0 +1,6 @@
+framework module Pods_LLDebugToolSwiftDemo {
+  umbrella header "Pods-LLDebugToolSwiftDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
