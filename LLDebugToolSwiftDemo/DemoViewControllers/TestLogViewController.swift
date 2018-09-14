@@ -12,11 +12,11 @@ class TestLogViewController: BaseTestViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = NSLocalizedString("test.color.style", comment: "")
+        self.title = NSLocalizedString("test.log", comment: "")
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -24,17 +24,11 @@ class TestLogViewController: BaseTestViewController {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         if (indexPath.row == 0) {
-            cell.textLabel?.text = "Use \"LLConfigColorStyleHack\""
-            cell.accessoryType = LLConfig.shared().colorStyle == .hack ? .checkmark : .none
+            cell.textLabel?.text = NSLocalizedString("insert.log", comment: "");
         } else if (indexPath.row == 1) {
-            cell.textLabel?.text = "Use \"LLConfigColorStyleSimple\""
-            cell.accessoryType = LLConfig.shared().colorStyle == .simple ? .checkmark : .none
+            cell.textLabel?.text = NSLocalizedString("insert.error.log", comment: "");
         } else if (indexPath.row == 2) {
-            cell.textLabel?.text = "Use \"LLConfigColorStyleSystem\""
-            cell.accessoryType = LLConfig.shared().colorStyle == .system ? .checkmark : .none
-        } else if (indexPath.row == 3) {
-            cell.textLabel?.text = "Use \"[[LLConfig sharedConfig] configBackgroundColor:[UIColor orangeColor] textColor:[UIColor whiteColor] statusBarStyle:UIStatusBarStyleDefault]\""
-            cell.accessoryType = LLConfig.shared().colorStyle == .custom ? .checkmark : .none
+            cell.textLabel?.text = NSLocalizedString("insert.call.log", comment: "");
         }
         
         return cell
@@ -42,36 +36,29 @@ class TestLogViewController: BaseTestViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (indexPath.row == 0) {
-            self.testHackColorStyle()
+            self.testNormalLog()
         } else if (indexPath.row == 1) {
-            self.testSimpleColorSytle()
+            self.testErrorLog()
         } else if (indexPath.row == 2) {
-            self.testSystemColorStyle()
-        } else if (indexPath.row == 3) {
-            self.testCustomColorConfig()
+            self.testEventLog()
         }
         tableView.reloadData()
     }
     
     // MARK: - ACTIONS
-    func testHackColorStyle() {
-        LLConfig.shared().colorStyle = .hack
-        LLDebugTool.shared().showDebugViewController(with: 0)
+    func testNormalLog() {
+        LLog.log(message: NSLocalizedString("normal.log.info", comment: ""))
+        LLDebugTool.shared().showDebugViewController(with: 1)
     }
     
-    func testSimpleColorSytle() {
-        LLConfig.shared().colorStyle = .simple
-        LLDebugTool.shared().showDebugViewController(with: 0)
+    func testErrorLog() {
+        LLog.errorLog(message: NSLocalizedString("error.log.info", comment: ""))
+        LLDebugTool.shared().showDebugViewController(with: 1)
     }
     
-    func testSystemColorStyle() {
-        LLConfig.shared().colorStyle = .system
-        LLDebugTool.shared().showDebugViewController(with: 0)
-    }
-    
-    func testCustomColorConfig() {
-        LLConfig.shared().configBackgroundColor(.orange, textColor: .white, statusBarStyle: .default)
-        LLDebugTool.shared().showDebugViewController(with: 0)
+    func testEventLog() {
+        LLog.errorLog(message: NSLocalizedString("call.log.info", comment: ""), event: NSLocalizedString("call", comment: ""))
+        LLDebugTool.shared().showDebugViewController(with: 1)
     }
 
 }

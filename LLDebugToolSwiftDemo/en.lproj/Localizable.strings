@@ -12,8 +12,7 @@
 "call" = "call somebody";
 "call.log.info" = "This is a log on event \"call somebody\", can be used to analysis or record for a problem";
 
-"normal.network" = "Normal(AFHTTPSessionManager/Json Response)";
-"normal.session.network" = "Normal(AFURLSessionManager/Json Response)";
+"normal.network" = "Normal(Alamofire/Json Response)";
 "image.network" = "Image(NSURLConnection/Image Response)";
 "HTML.network" = "HTML(NSURLSession/HTML Response)";
 

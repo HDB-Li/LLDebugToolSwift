@@ -50,18 +50,28 @@ class TestCrashViewController: BaseTestViewController {
     
     // MARK: - ACTIONS
     func testArrayOutRangeCrash() {
-        LLConfig.shared().colorStyle = .hack
-        LLDebugTool.shared().showDebugViewController(with: 0)
+        UserDefaults.standard.set(true, forKey: "openCrash")
+        UserDefaults.standard.synchronize()
+        let array = ["a" , "b"]
+        _ = array[3]
     }
     
     func testPointErrorCrash() {
-        LLConfig.shared().colorStyle = .simple
-        LLDebugTool.shared().showDebugViewController(with: 0)
+        UserDefaults.standard.set(true, forKey: "openCrash")
+        UserDefaults.standard.synchronize()
+        let a : NSObject = "dssdf" as NSObject
+        _ = (a as! NSArray).firstObject
     }
     
     func testSignalCrash() {
-        LLConfig.shared().colorStyle = .system
-        LLDebugTool.shared().showDebugViewController(with: 0)
+        UserDefaults.standard.set(true, forKey: "openCrash")
+        UserDefaults.standard.synchronize()
+        kill(0, SIGTRAP)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            LLDebugTool.shared().showDebugViewController(with: 2)
+            UserDefaults.standard.set(false, forKey: "openCrash")
+            UserDefaults.standard.synchronize()
+        }
     }
 
 }

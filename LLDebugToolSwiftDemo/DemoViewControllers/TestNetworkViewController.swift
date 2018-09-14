@@ -6,89 +6,72 @@
 //
 
 import UIKit
+import LLDebugTool
+import Alamofire
 
 class TestNetworkViewController: BaseTestViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.title = NSLocalizedString("test.network.request", comment: "")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 3
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
+        
+        if (indexPath.row == 0) {
+            cell.textLabel?.text = NSLocalizedString("normal.network", comment: "")
+        } else if (indexPath.row == 1) {
+            cell.textLabel?.text = NSLocalizedString("image.network", comment: "")
+        } else if (indexPath.row == 2) {
+            cell.textLabel?.text = NSLocalizedString("HTML.network", comment: "")
+        }
+        
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (indexPath.row == 0) {
+            self.testNormalNetworkRequest()
+        } else if (indexPath.row == 1) {
+            self.testImageNetworkRequest()
+        } else if (indexPath.row == 2) {
+            self.testHTMLNetworkRequest()
+        }
+        tableView.reloadData()
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    // MARK: - ACTIONS
+    func testNormalNetworkRequest() {
+        
+        let url = "http://baike.baidu.com/api/openapi/BaikeLemmaCardApi?&format=json&appid=379020&bk_key=%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85&bk_length=600"
+        // Use Alamofire
+        Alamofire.request(url).responseJSON { (response) in
+            LLDebugTool.shared().showDebugViewController(with: 0)
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    func testImageNetworkRequest() {
+        //NSURLConnection
+        var request = URLRequest(url: URL(string: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525346881086&di=b234c66c82427034962131d20e9f6b56&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F011cf15548caf50000019ae9c5c728.jpg%402o.jpg")!)
+        request.httpMethod = "GET"
+        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue()) { (response, data, error) in
+            LLDebugTool.shared().showDebugViewController(with: 0)
+        }
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    
+    func testHTMLNetworkRequest() {
+        //NSURLSession
+        let request = URLRequest(url: URL(string: "https://www.baidu.com")!)
+        let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            LLDebugTool.shared().showDebugViewController(with: 0)
+        }
+        dataTask.resume()
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

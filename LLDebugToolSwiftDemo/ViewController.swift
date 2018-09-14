@@ -22,8 +22,13 @@
 //  SOFTWARE.
 
 import UIKit
-import Photos
+
+// Request
 import LLDebugTool
+
+// For demo.
+import Photos
+import Alamofire
 
 class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSource {
     
@@ -44,7 +49,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         if UserDefaults.standard.bool(forKey: "openCrash") {
             UserDefaults.standard.set(false, forKey: "openCrash")
             UserDefaults.standard.synchronize()
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {[weak self] in
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
                 LLDebugTool.shared().showDebugViewController(with: 2)
             }
         }
@@ -54,47 +59,49 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         urlRequest.httpMethod = "GET"
         NSURLConnection.sendAsynchronousRequest(urlRequest, queue: OperationQueue()) {[weak self] (response, data, connectionError) in
             if connectionError == nil && data != nil {
-                let image = UIImage(data: data!)
-                self?.imgView.image = image
+                DispatchQueue.main.async {
+                    let image = UIImage(data: data!)
+                    self?.imgView.image = image
+                }
             }
         }
+
+        // Json Response
+        Alamofire.request("http://baike.baidu.com/api/openapi/BaikeLemmaCardApi?&format=json&appid=379020&bk_key=%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85&bk_length=600").responseJSON { (response) in
+
+        }
         
-//        // Json Response
-//        [[NetTool sharedTool].afHTTPSessionManager GET:@"http://baike.baidu.com/api/openapi/BaikeLemmaCardApi?&format=json&appid=379020&bk_key=%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85&bk_length=600" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//
-//            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//
-//            }];
-//
-//        //NSURLSession
-//        NSMutableURLRequest *htmlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://cocoapods.org/pods/LLDebugTool"]];
-//        [htmlRequest setHTTPMethod:@"GET"];
-//        NSURLSessionDataTask *dataTask = [[NetTool sharedTool].session dataTaskWithRequest:htmlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-//            // Not important. Just check to see if the current Demo version is consistent with the latest version.
-//            // 只是检查一下当前Demo版本和最新版本是否一致，不一致就提示一下新版本。
-//            NSString *htmlString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-//            NSArray *array = [htmlString componentsSeparatedByString:@"http://cocoadocs.org/docsets/LLDebugTool/"];
-//            if (array.count > 2) {
-//            NSString *str = array[1];
-//            NSArray *array2 = [str componentsSeparatedByString:@"/preview.png"];
-//            if (array2.count >= 2) {
-//            NSString *newVersion = array2[0];
-//            if ([newVersion componentsSeparatedByString:@"."].count == 3) {
-//            if ([[LLDebugTool sharedTool].version compare:newVersion] == NSOrderedAscending) {
-//            UIAlertController *vc = [UIAlertController alertControllerWithTitle:@"Note" message:[NSString stringWithFormat:@"%@\nNew Version : %@\nCurrent Version : %@",NSLocalizedString(@"new.version", nil),newVersion,[LLDebugTool sharedTool].version] preferredStyle:UIAlertControllerStyleAlert];
-//            UIAlertAction *action = [UIAlertAction actionWithTitle:@"I known" style:UIAlertActionStyleDefault handler:nil];
-//            [vc addAction:action];
-//            [self presentViewController:vc animated:YES completion:nil];
-//            }
-//            }
-//            }
-//            }
-//            }];
-//        [dataTask resume];
+        //NSURLSession
+        var htmlRequest = URLRequest(url: URL(string: "https://cocoapods.org/pods/LLDebugTool")!)
+        htmlRequest.httpMethod = "GET"
+        let dataTask = URLSession.shared.dataTask(with: htmlRequest) { (data, response, error) in
+            // Not important. Just check to see if the current Demo version is consistent with the latest version.
+            // 只是检查一下当前Demo版本和最新版本是否一致，不一致就提示一下新版本。
+            if error == nil && data != nil {
+                let htmlString = String(data: data!, encoding: String.Encoding.utf8)
+                let array = htmlString?.components(separatedBy: "http://cocoadocs.org/docsets/LLDebugToolSwift/")
+                if array != nil && array!.count > 2 {
+                    let str = array![1]
+                    let array2 = str.components(separatedBy: "/preview.png")
+                    if array2.count >= 2 {
+                        let newVersion = array2[0]
+                        if newVersion.components(separatedBy: ".").count == 3 {
+                            if LLDebugTool.shared().version.compare(newVersion) == .orderedAscending {
+                                let vc = UIAlertController(title: "Note", message: String(format: "%@\nNew Version : %@\nCurrent Version : %@", arguments: [NSLocalizedString("new.version", comment: ""),newVersion,LLDebugTool.shared().version]), preferredStyle: .alert)
+                                let action = UIAlertAction(title: "I known", style: .default, handler: nil)
+                                vc.addAction(action)
+                                self.present(vc, animated: true, completion: nil)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        dataTask.resume()
         
         // Log.
         // NSLocalizedString is used for multiple languages.
-        // You can just use as LLog(@"What you want to pring").
+        // You can just use as LLog.log(@"What you want to pring").
         LLog.log(message: NSLocalizedString("initial.log", comment: ""))
     }
     
@@ -125,7 +132,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             return 1
         }
         if section == 2 {
-            return 1
+            return 0
         }
         if section == 3 {
             return 1
@@ -202,6 +209,8 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             let vc = TestLogViewController(style: .grouped)
             self.navigationController?.pushViewController(vc, animated: true)
         } else if (indexPath.section == 2) {
+            LLTool.toastMessage("A little bug, Fix soon.")
+            return
             let vc = TestCrashViewController(style: .grouped)
             self.navigationController?.pushViewController(vc, animated: true)
         } else if (indexPath.section == 3) {
@@ -226,7 +235,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         } else if (section == 1) {
             return "Log"
         } else if (section == 2) {
-            return "Crash"
+//            return "Crash"
         } else if (section == 3) {
             return "App Info"
         } else if (section == 4) {

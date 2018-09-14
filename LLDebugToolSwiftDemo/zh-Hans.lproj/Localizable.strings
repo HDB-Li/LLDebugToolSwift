@@ -12,8 +12,7 @@
 "call" = "打电话";
 "call.log.info" = "这是一条关于\"打电话\"事件的log,用于针对某个问题的分析或记录";
 
-"normal.network" = "普通网络请求(AFHTTPSessionManager/Json Response)";
-"normal.session.network" = "普通网络请求(AFURLSessionManager/Json Response)";
+"normal.network" = "普通网络请求(Alamofire/Json Response)";
 "image.network" = "图片网络请求(NSURLConnection/Image Response)";
 "HTML.network" = "HTML网络请求(NSURLSession/HTML Response)";
 

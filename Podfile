@@ -9,6 +9,8 @@ target 'LLDebugToolSwiftDemo' do
 
   pod 'LLDebugTool' , '1.1.6'
 
+  pod 'Alamofire' , '~> 4.7'
+
   target 'LLDebugToolSwiftDemoTests' do
     inherit! :search_paths
     # Pods for testing
