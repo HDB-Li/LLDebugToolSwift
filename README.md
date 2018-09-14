@@ -12,7 +12,7 @@
 
 ## Introduction
 
-[点击查看中文简介](https://github.com/HDB-Li/LLDebugTool/blob/master/README-cn.md)
+[点击查看中文简介](https://github.com/HDB-Li/LLDebugToolSwift/blob/master/README-cn.md)
 
 LLDebugTool is a debugging tool for developers and testers that can help you analyze and manipulate data in non-xcode situations.
 
