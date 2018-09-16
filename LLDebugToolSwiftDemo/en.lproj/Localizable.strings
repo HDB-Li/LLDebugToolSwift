@@ -15,6 +15,7 @@
 "normal.network" = "Normal(Alamofire/Json Response)";
 "image.network" = "Image(NSURLConnection/Image Response)";
 "HTML.network" = "HTML(NSURLSession/HTML Response)";
+"Moya.network" = "JSON(Moya/Json Response)";
 
 "insert.log" = "Insert a log";
 "insert.error.log" = "Insert a log with error level";

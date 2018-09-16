@@ -15,6 +15,7 @@
 "normal.network" = "普通网络请求(Alamofire/Json Response)";
 "image.network" = "图片网络请求(NSURLConnection/Image Response)";
 "HTML.network" = "HTML网络请求(NSURLSession/HTML Response)";
+"Moya.network" = "JSON网络请求(Moya/Json Response)";
 
 "insert.log" = "插入一条Log";
 "insert.error.log" = "插入一条Error级别的Log";

@@ -8,6 +8,7 @@
 import UIKit
 import LLDebugTool
 import Alamofire
+import Moya
 
 class TestNetworkViewController: BaseTestViewController {
 
@@ -17,7 +18,7 @@ class TestNetworkViewController: BaseTestViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -30,6 +31,8 @@ class TestNetworkViewController: BaseTestViewController {
             cell.textLabel?.text = NSLocalizedString("image.network", comment: "")
         } else if (indexPath.row == 2) {
             cell.textLabel?.text = NSLocalizedString("HTML.network", comment: "")
+        } else if (indexPath.row == 3) {
+            cell.textLabel?.text = NSLocalizedString("Moya.network", comment: "")
         }
         
         return cell
@@ -42,6 +45,8 @@ class TestNetworkViewController: BaseTestViewController {
             self.testImageNetworkRequest()
         } else if (indexPath.row == 2) {
             self.testHTMLNetworkRequest()
+        } else if (indexPath.row == 3) {
+            self.testMoya()
         }
         tableView.reloadData()
     }
@@ -74,4 +79,11 @@ class TestNetworkViewController: BaseTestViewController {
         dataTask.resume()
     }
 
+    func testMoya() {
+        // Moya
+        let provider = MoyaProvider<MyService>()
+        provider.request(.zen) { (result) in
+            LLDebugTool.shared().showDebugViewController(with: 0)
+        }
+    }
 }

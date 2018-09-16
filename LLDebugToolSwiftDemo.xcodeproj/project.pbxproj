@@ -26,6 +26,7 @@
 		36762105214A6DB300F433EE /* TestWindowStyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36762104214A6DB300F433EE /* TestWindowStyleViewController.swift */; };
 		75C3C7BAEB5DA6775A13824C /* Pods_LLDebugToolSwiftDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3780C4404350A00107BAAD /* Pods_LLDebugToolSwiftDemoTests.framework */; };
 		9B3FB081B8AD3B63B74EAB84 /* Pods_LLDebugToolSwiftDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48CCDFFC351EDFC7025E3FFD /* Pods_LLDebugToolSwiftDemoUITests.framework */; };
+		C4320D41214DFB41000CC110 /* MyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4320D40214DFB41000CC110 /* MyService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		6CB7EDE77CABE52E9125F0D6 /* Pods-LLDebugToolSwiftDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLDebugToolSwiftDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLDebugToolSwiftDemoTests/Pods-LLDebugToolSwiftDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		BD3780C4404350A00107BAAD /* Pods_LLDebugToolSwiftDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LLDebugToolSwiftDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C040A7CC9CE105726DF9305C /* Pods-LLDebugToolSwiftDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLDebugToolSwiftDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LLDebugToolSwiftDemoTests/Pods-LLDebugToolSwiftDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C4320D40214DFB41000CC110 /* MyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyService.swift; sourceTree = "<group>"; };
 		E45D43AD8FFE9A42E9D1CA87 /* Pods-LLDebugToolSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLDebugToolSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLDebugToolSwiftDemo/Pods-LLDebugToolSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 		FE2985D92B0F6630DB319AC0 /* Pods-LLDebugToolSwiftDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLDebugToolSwiftDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLDebugToolSwiftDemoUITests/Pods-LLDebugToolSwiftDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +142,7 @@
 				367620F9214A6D5500F433EE /* DemoViewControllers */,
 				364A059F214917E70056719F /* AppDelegate.swift */,
 				364A05A1214917E70056719F /* ViewController.swift */,
+				C4320D40214DFB41000CC110 /* MyService.swift */,
 				364A05A3214917E70056719F /* Main.storyboard */,
 				364A05A6214917E70056719F /* Assets.xcassets */,
 				364A05A8214917E70056719F /* LaunchScreen.storyboard */,
@@ -360,12 +363,16 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/LLDebugTool/LLDebugTool.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LLDebugTool.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -474,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				367620FF214A6D9400F433EE /* TestCrashViewController.swift in Sources */,
+				C4320D41214DFB41000CC110 /* MyService.swift in Sources */,
 				36762105214A6DB300F433EE /* TestWindowStyleViewController.swift in Sources */,
 				367620FD214A6D8700F433EE /* TestColorStyleViewController.swift in Sources */,
 				36762101214A6D9F00F433EE /* TestLogViewController.swift in Sources */,
