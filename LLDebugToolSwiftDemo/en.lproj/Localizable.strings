@@ -1,10 +1,10 @@
-/* 
-  Localizable.strings
-  LLDebugToolSwiftDemo
-
-  Created by Li on 2018/9/13.
-  
-*/
+/*
+ Localizable.strings
+ LLDebugToolDemo
+ 
+ Created by Li on 2018/5/8.
+ Copyright © 2018年 li. All rights reserved.
+ */
 
 "initial.log" = "This is an initialization log";
 "normal.log.info" = "This is a common level log that can be used for burial or information printing";
@@ -12,10 +12,10 @@
 "call" = "call somebody";
 "call.log.info" = "This is a log on event \"call somebody\", can be used to analysis or record for a problem";
 
-"normal.network" = "Normal(Alamofire/Json Response)";
+"normal.network" = "Normal(AFHTTPSessionManager/Json Response)";
+"normal.session.network" = "Normal(AFURLSessionManager/Json Response)";
 "image.network" = "Image(NSURLConnection/Image Response)";
 "HTML.network" = "HTML(NSURLSession/HTML Response)";
-"Moya.network" = "JSON(Moya/Json Response)";
 
 "insert.log" = "Insert a log";
 "insert.error.log" = "Insert a log with error level";
@@ -42,3 +42,5 @@
 "test.window.style" = "Show windowStyle configuration";
 
 "new.version" = "A new version demo is available";
+"crash.tip" = "If your project/Demo under run XCode contains Exception Breakpoint, you need to after the program crashes, Continue to click on the XCode ` Continue program execution `(Tip 1), until the end of the program completely(Tip 2). This function can be used normally when non-xcode runs, and when run under XCode, Exception Breakpoint takes precedence over LLDebugTool intercept crash.";
+
