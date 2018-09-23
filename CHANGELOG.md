@@ -1,3 +1,11 @@
+## [1.2.0](https://github.com/HDB-Li/LLDebugToolSwift/releases/tag/1.2.0) (09/22/2018)
+
+###  Synchronous update
+
+More update informations please see [LLDebugTool CHANGELOG](https://github.com/HDB-Li/LLDebugTool/blob/master/CHANGELOG.md).
+
+Update for version 1.2.0 based on LLDebugTool. Nothing changed in swift.
+
 ## [1.1.7](https://github.com/HDB-Li/LLDebugToolSwift/releases/tag/1.1.7) (09/14/2018)
 
 ###  Synchronous update

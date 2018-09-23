@@ -1,10 +1,10 @@
-/* 
-  Localizable.strings
-  LLDebugToolSwiftDemo
-
-  Created by Li on 2018/9/13.
-  
-*/
+/*
+ Localizable.strings
+ LLDebugToolDemo
+ 
+ Created by Li on 2018/5/8.
+ Copyright © 2018年 li. All rights reserved.
+ */
 
 "initial.log" = "这是一条初始化的log";
 "normal.log.info" = "这是一条普通级别的log,可用于埋点或信息打印";
@@ -12,10 +12,10 @@
 "call" = "打电话";
 "call.log.info" = "这是一条关于\"打电话\"事件的log,用于针对某个问题的分析或记录";
 
-"normal.network" = "普通网络请求(Alamofire/Json Response)";
+"normal.network" = "普通网络请求(AFHTTPSessionManager/Json Response)";
+"normal.session.network" = "普通网络请求(AFURLSessionManager/Json Response)";
 "image.network" = "图片网络请求(NSURLConnection/Image Response)";
 "HTML.network" = "HTML网络请求(NSURLSession/HTML Response)";
-"Moya.network" = "JSON网络请求(Moya/Json Response)";
 
 "insert.log" = "插入一条Log";
 "insert.error.log" = "插入一条Error级别的Log";
@@ -42,3 +42,4 @@
 "test.window.style" = "展示WindowStyle配置";
 
 "new.version" = "有新版本Demo可用";
+"crash.tip" = "如果你的项目/Demo在XCode运行下中包含Exception Breakpoint，你需要在程序崩溃后，继续点击XCode上的`Continue program execution`(Tip 1)，直到程序完全结束(Tip 2)。这个功能在非XCode运行时可以正常使用，在XCode下运行时Exception Breakpoint会优先于LLDebugTool拦截崩溃。";
