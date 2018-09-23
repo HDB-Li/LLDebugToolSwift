@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.platform            = :ios, "8.0"
   s.source              = { :git => "https://github.com/HDB-Li/LLDebugToolSwift.git", :tag => s.version }
   s.requires_arc        = true
-#  s.source_files	    = "LLDebugToolSwift/**/*.{h,m,swift}"
+  s.source_files	    = "LLDebugToolSwift/**/*.{h,m,swift}"
 #  s.resources		    = "LLDebugToolSwift/**/*.{xib,storyboard,bundle}"
   s.dependency            "LLDebugTool" , '1.2.0'
   s.swift_version	= "4.0"

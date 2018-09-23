@@ -245,7 +245,6 @@
 				364A05AC214917E70056719F /* Sources */,
 				364A05AD214917E70056719F /* Frameworks */,
 				364A05AE214917E70056719F /* Resources */,
-				C21809CAB80DD894785C9043 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,7 +264,6 @@
 				364A05B7214917E70056719F /* Sources */,
 				364A05B8214917E70056719F /* Frameworks */,
 				364A05B9214917E70056719F /* Resources */,
-				B53BBD97B8607A179A22FD7A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -377,46 +375,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LLDebugToolSwiftDemo/Pods-LLDebugToolSwiftDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B53BBD97B8607A179A22FD7A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LLDebugToolSwiftDemoUITests/Pods-LLDebugToolSwiftDemoUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
-				"${BUILT_PRODUCTS_DIR}/LLDebugTool/LLDebugTool.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LLDebugTool.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LLDebugToolSwiftDemoUITests/Pods-LLDebugToolSwiftDemoUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C21809CAB80DD894785C9043 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LLDebugToolSwiftDemoTests/Pods-LLDebugToolSwiftDemoTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
-				"${BUILT_PRODUCTS_DIR}/LLDebugTool/LLDebugTool.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LLDebugTool.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LLDebugToolSwiftDemoTests/Pods-LLDebugToolSwiftDemoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C34B62C56B97F233FD5E9F7B /* [CP] Check Pods Manifest.lock */ = {

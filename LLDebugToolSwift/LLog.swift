@@ -37,7 +37,7 @@ public class LLog: NSObject {
     /// Log a normal message with event.
     public static func log(message : String? , event : String? , file : String = #file , function : String = #function , lineNumber : Int = #line) {
         #if DEBUG
-        self.privateLog(message: message, event: event, file: file, function: function, lineNumber: lineNumber, level: .default)
+            LLLogHelper.shared().log(inFile: (file as NSString).lastPathComponent, function: function, lineNo: lineNumber, level: .default, onEvent: event, message: message)
         #endif
     }
     
@@ -49,7 +49,7 @@ public class LLog: NSObject {
     /// Log a alert message with event.
     public static func alertLog(message : String? , event : String? , file : String = #file , function : String = #function , lineNumber : Int = #line) {
         #if DEBUG
-        self.privateLog(message: message, event: event, file: file, function: function, lineNumber: lineNumber, level: .alert)
+            LLLogHelper.shared().log(inFile: (file as NSString).lastPathComponent, function: function, lineNo: lineNumber, level: .alert, onEvent: event, message: message)
         #endif
     }
     
@@ -61,7 +61,7 @@ public class LLog: NSObject {
     /// Log a warning message with event.
     public static func warningLog(message : String? , event : String? , file : String = #file , function : String = #function , lineNumber : Int = #line) {
         #if DEBUG
-        self.privateLog(message: message, event: event, file: file, function: function, lineNumber: lineNumber, level: .warning)
+            LLLogHelper.shared().log(inFile: (file as NSString).lastPathComponent, function: function, lineNo: lineNumber, level: .warning, onEvent: event, message: message)
         #endif
     }
     
@@ -73,14 +73,7 @@ public class LLog: NSObject {
     /// Log a error message with event.
     public static func errorLog(message : String? , event : String? , file : String = #file , function : String = #function , lineNumber : Int = #line) {
         #if DEBUG
-        self.privateLog(message: message, event: event, file: file, function: function, lineNumber: lineNumber, level: .error)
-        #endif
-    }
-    
-    /// Private log.
-    private static func privateLog(message : String? , event : String? , file : String , function : String , lineNumber : Int , level : LLConfigLogLevel) {
-        #if DEBUG
-        LLDebugTool.shared().log(inFile: (file as NSString).lastPathComponent, function: function, lineNo: lineNumber, level: level, onEvent: event, message: message)
+            LLLogHelper.shared().log(inFile: (file as NSString).lastPathComponent, function: function, lineNo: lineNumber, level: .error, onEvent: event, message: message)
         #endif
     }
     
