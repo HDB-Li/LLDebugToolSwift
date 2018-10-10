@@ -1,9 +1,9 @@
 <p align="center" >
-  <img src="https://raw.githubusercontent.com/HDB-Li/HDBImageRepository/master/LLDebugTool/header.png" alt="LLDebugTool" title="LLDebugTool">
+<img src="https://raw.githubusercontent.com/HDB-Li/HDBImageRepository/master/LLDebugTool/header.png" alt="LLDebugTool" title="LLDebugTool">
 </p>
 
 [![Version](https://img.shields.io/badge/IOS-%3E%3D8.0-f07e48.svg)](https://img.shields.io/badge/IOS-%3E%3D8.0-f07e48.svg)
-[![CocoaPods Compatible](https://img.shields.io/badge/pod-v1.2.0-blue.svg)](https://img.shields.io/badge/pod-v1.2.0-blue.svg)
+[![CocoaPods Compatible](https://img.shields.io/badge/pod-v1.2.1-blue.svg)](https://img.shields.io/badge/pod-v1.2.1-blue.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform](https://img.shields.io/badge/platform-ios-lightgrey.svg)](https://img.shields.io/badge/platform-ios-lightgrey.svg)
 [![License](https://img.shields.io/badge/license-MIT-91bc2b.svg)](https://img.shields.io/badge/license-MIT-91bc2b.svg)
@@ -39,28 +39,20 @@ Choose LLDebugTool for your next project, or migrate over your existing projects
 <img src="https://raw.githubusercontent.com/HDB-Li/HDBImageRepository/master/LLDebugTool/ScreenShot-6.png" width="18%"> </img>
 </div>
 
-## What's new in 1.2.0
+## What's new in 1.2.1
 
-### Supports component-based.
+### Fix a display bug.
 
 `LLDebugTool` supports component-based now. Now you can integrate only one or more modules into your own **Debug debugger**. You can directly use the view controller contained in each module, or just call the functions in `Function` folder and build UI yourself.
 
 How to use components, see Wiki[Use Components](https://github.com/HDB-Li/LLDebugTool/wiki/Use-Components) or [Adding LLDebugTool to your project](https://github.com/HDB-Li/LLDebugTool#adding-lldebugtool-to-your-project).
 
-More changes can be viewed in [Version 1.2.0 Project](https://github.com/HDB-Li/LLDebugTool/projects/7).
-
-#### Add
-
-* Add `LLRoute`, In order to solve mutual reference between components. When the relevant components exist, `LLRoute` will call the corresponding method, otherwise it will not do anything.
+More changes can be viewed in [Version 1.2.1 Project](https://github.com/HDB-Li/LLDebugTool/projects/7).
 
 #### Update
 
-* Update folder structure. Now the whole project is classified according to the components, Under each component folder, it is divided into `Function` and `UserInterface`.
+* Update `LLFilterEventView.m` and add a default averageCount to fix FilterView showing incomplete questions.
 
-* Modify files referenced between components instead of `LLRoute`.
-
-* Update `NSURLSessionConfiguration.m` to hook protocolClasses method.
-        
 ## What can you do with LLDebugTool?
 
 - Always check the network request or view log information for certain events without having to run under XCode. This is useful in solving the testers' problems..
@@ -83,7 +75,7 @@ More changes can be viewed in [Version 1.2.0 Project](https://github.com/HDB-Li/
 
 ##### Objective - C
 
-> 1. Add a pod entry for LLDebugTool to your Podfile `pod 'LLDebugTool' , '~> 1.0.0'`, If only you want to use it only in Debug mode, Add a pod entry for LLDebugTool to your Podfile `pod 'LLDebugTool' , '~> 1.0.0' ,:configurations => ['Debug']`, Details also see [Wiki/Use in Debug environment](https://github.com/HDB-Li/LLDebugTool/wiki/Use-in-Debug-environment). If you want to specify the version, use as `pod 'LLDebugTool' , '1.2.0' ,:configurations => ['Debug']`.
+> 1. Add a pod entry for LLDebugTool to your Podfile `pod 'LLDebugTool' , '~> 1.0.0'`, If only you want to use it only in Debug mode, Add a pod entry for LLDebugTool to your Podfile `pod 'LLDebugTool' , '~> 1.0.0' ,:configurations => ['Debug']`, Details also see [Wiki/Use in Debug environment](https://github.com/HDB-Li/LLDebugTool/wiki/Use-in-Debug-environment). If you want to specify the version, use as `pod 'LLDebugTool' , '1.2.1' ,:configurations => ['Debug']`.
 > 2. If you want to use a module, add a pod entry for LLDebugTool to your Podfile `pod 'LLDebugTool/{Component Name}'`, Currently supported components are
 > ```
 > pod 'LLDebugTool/AppInfo'
@@ -98,7 +90,7 @@ More changes can be viewed in [Version 1.2.0 Project](https://github.com/HDB-Li/
 
 ##### Swift
 
-> 1. Add a pod entry for LLDebugToolSwift to your Podfile `pod 'LLDebugToolSwift' , '~> 1.0.0'`, If only you want to use it only in Debug mode, Add a pod entry for LLDebugToolSwift to your Podfile `pod 'LLDebugToolSwift' , '~> 1.0.0' ,:configurations => ['Debug']`, Details also see [Wiki/Use in Debug environment](https://github.com/HDB-Li/LLDebugTool/wiki/Use-in-Debug-environment). If you want to specify the version, use as `pod 'LLDebugToolSwift' , '1.2.0' ,:configurations => ['Debug']`.
+> 1. Add a pod entry for LLDebugToolSwift to your Podfile `pod 'LLDebugToolSwift' , '~> 1.0.0'`, If only you want to use it only in Debug mode, Add a pod entry for LLDebugToolSwift to your Podfile `pod 'LLDebugToolSwift' , '~> 1.0.0' ,:configurations => ['Debug']`, Details also see [Wiki/Use in Debug environment](https://github.com/HDB-Li/LLDebugTool/wiki/Use-in-Debug-environment). If you want to specify the version, use as `pod 'LLDebugToolSwift' , '1.2.1' ,:configurations => ['Debug']`.
 > 2. If you want to use a module, add a pod entry for LLDebugTool to your Podfile `pod 'LLDebugToolSwift/{Component Name}'`, Currently supported components are
 > ```
 > pod 'LLDebugToolSwift/AppInfo'
@@ -168,13 +160,13 @@ In Objective-C
 #import "LLDebug.h"
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // The default color configuration is green background and white text color. 
+// The default color configuration is green background and white text color. 
 
-    // Start working.
-    [[LLDebugTool sharedTool] startWorking];
-    
-    // Write your project code here.
-    return YES;
+// Start working.
+[[LLDebugTool sharedTool] startWorking];
+
+// Write your project code here.
+return YES;
 }
 ```
 
@@ -183,15 +175,15 @@ In Swift
 ```Swift
 import LLDebugToolSwift
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // ####################### Start LLDebugTool #######################//
-        // Use this line to start working.
-        LLDebugTool.shared().startWorking()
-        
-        // Write your project code here.
-        
-        return true
-    }
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+// ####################### Start LLDebugTool #######################//
+// Use this line to start working.
+LLDebugTool.shared().startWorking()
+
+// Write your project code here.
+
+return true
+}
 ```
 
 * `Start With Custom Config`
@@ -204,28 +196,28 @@ In Objective-C
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    //####################### Color Style #######################//
-    // Uncomment one of the following lines to change the color configuration.
-    // [LLConfig sharedConfig].colorStyle = LLConfigColorStyleSystem;
-    // [[LLConfig sharedConfig] configBackgroundColor:[UIColor orangeColor] textColor:[UIColor whiteColor] statusBarStyle:UIStatusBarStyleDefault];
-    
-    //####################### User Identity #######################//
-    // Use this line to tag user. More config please see "LLConfig.h".
-    [LLConfig sharedConfig].userIdentity = @"Miss L";
-    
-    //####################### Window Style #######################//
-    // Uncomment one of the following lines to change the window style.
-    // [LLConfig sharedConfig].windowStyle = LLConfigWindowNetBar;
+//####################### Color Style #######################//
+// Uncomment one of the following lines to change the color configuration.
+// [LLConfig sharedConfig].colorStyle = LLConfigColorStyleSystem;
+// [[LLConfig sharedConfig] configBackgroundColor:[UIColor orangeColor] textColor:[UIColor whiteColor] statusBarStyle:UIStatusBarStyleDefault];
 
-    //####################### Features #######################//
-    // Uncomment this line to change the available features.
-    // [LLConfig sharedConfig].availables = LLConfigAvailableNoneAppInfo;
-    
-    // ####################### Start LLDebugTool #######################//
-    // Use this line to start working.
-    [[LLDebugTool sharedTool] startWorking];
-    
-    return YES;
+//####################### User Identity #######################//
+// Use this line to tag user. More config please see "LLConfig.h".
+[LLConfig sharedConfig].userIdentity = @"Miss L";
+
+//####################### Window Style #######################//
+// Uncomment one of the following lines to change the window style.
+// [LLConfig sharedConfig].windowStyle = LLConfigWindowNetBar;
+
+//####################### Features #######################//
+// Uncomment this line to change the available features.
+// [LLConfig sharedConfig].availables = LLConfigAvailableNoneAppInfo;
+
+// ####################### Start LLDebugTool #######################//
+// Use this line to start working.
+[[LLDebugTool sharedTool] startWorking];
+
+return YES;
 }
 ```
 
@@ -234,31 +226,31 @@ In Swift
 ```Swift
 import LLDebugToolSwift
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        //####################### Color Style #######################//
-        // Uncomment one of the following lines to change the color configuration.
-        // LLConfig.shared().colorStyle = .system
-        // LLConfig.shared().configBackgroundColor(.orange, textColor: .white, statusBarStyle: .default)
-        
-        //####################### User Identity #######################//
-        // Use this line to tag user. More config please see "LLConfig.h".
-        LLConfig.shared().userIdentity = "Miss L";
-        
-        //####################### Window Style #######################//
-        // Uncomment one of the following lines to change the window style.
-        // LLConfig.shared().windowStyle = .netBar
-        
-        //####################### Features #######################//
-        // Uncomment this line to change the available features.
-        // LLConfig.shared().availables = .noneAppInfo
-        
-        // ####################### Start LLDebugTool #######################//
-        // Use this line to start working.
-        LLDebugTool.shared().startWorking()
-        
-        return true
-    }
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+//####################### Color Style #######################//
+// Uncomment one of the following lines to change the color configuration.
+// LLConfig.shared().colorStyle = .system
+// LLConfig.shared().configBackgroundColor(.orange, textColor: .white, statusBarStyle: .default)
+
+//####################### User Identity #######################//
+// Use this line to tag user. More config please see "LLConfig.h".
+LLConfig.shared().userIdentity = "Miss L";
+
+//####################### Window Style #######################//
+// Uncomment one of the following lines to change the window style.
+// LLConfig.shared().windowStyle = .netBar
+
+//####################### Features #######################//
+// Uncomment this line to change the available features.
+// LLConfig.shared().availables = .noneAppInfo
+
+// ####################### Start LLDebugTool #######################//
+// Use this line to start working.
+LLDebugTool.shared().startWorking()
+
+return true
+}
 ```
 
 ### Log
@@ -273,130 +265,130 @@ In Objective-C
 #import "LLDebug.h"
 
 - (void)testNormalLog {
-    // Insert an LLog where you want to print.
-    LLog(@"Message you want to save or print.");
-}
-```
-
-In Swift
-
-```Swift
-import LLDebugToolSwift
-
-    func testNormalLog() {
-        // Insert an LLog where you want to print.
-        LLog.log(message: "Message you want to save or print.")
-    }
-
-```
-
-* `Save Log with event and level`
-
-In Objective-C
-
-```Objective-C
-#import "LLDebug.h"
-
-- (void)testEventErrorLog {
-    // Insert an LLog_Error_Event where you want to print an event and level log.
-    LLog_Error_Event(@"The event that you want to mark. such as bugA, taskB or processC.",@"Message you want to save or print.");
-}
-```
-
-In Swift
-
-```Swift
-import LLDebugToolSwift
-
-    func testEventErrorLog() {
-        // Insert an LLog_Error_Event where you want to print an event and level log.
-        LLog.errorLog(message: "Message you want to save or print.", event: "The event that you want to mark. such as bugA, taskB or processC.")
-    }
-```
-
-### Network Request
-
-You don't need to do anything, just call the "startWorking" will monitoring most of network requests, including the use of NSURLSession, NSURLConnection and AFNetworking. If you find that you can't be monitored in some cases, please open an issue and tell me.
-
-### Crash
-
-You don't need to do anything, just call the "startWorking" to intercept the crash, store crash information, cause and stack informations, and also store the network requests and log informations at the this time.
-
-### AppInfo
-
-LLDebugTool monitors the app's CPU, memory, and FPS. At the same time, you can also quickly check the various information of the app.
-
-### Sandbox
-
-LLDebugTool provides a quick way to view and manipulate sandbox, you can easily delete the files/folders inside the sandbox, or you can share files/folders by airdrop elsewhere. As long as apple supports this file format, you can preview the files directly in LLDebugTool.
-
-### More Usage
-
-* You can get more help by looking at the [Wiki](https://github.com/HDB-Li/LLDebugTool/wiki).
-* You can download and run the [LLDebugToolDemo](https://github.com/HDB-Li/LLDebugTool/archive/master.zip) or [LLDebugToolSwiftDemo](https://github.com/HDB-Li/LLDebugToolSwift/archive/master.zip) to find more use with LLDebugTool. The demo is build under XCode9.3, ios 11.3 and cocoapods 1.5.0. If there is any version compatibility problem, please let me know.
-
-## Requirements
-
-LLDebugTool works on iOS 8+ and requires ARC to build. It depends on the following Apple frameworks, which should already be included with most Xcode templates:
-
-* `UIKit`
-
-* `Foundation`
-
-* `SystemConfiguration`
-
-* `Photos`
-
-* `QuickLook`
-
-## Architecture
-
-* `LLDebug.h` Public header file.
-
-    >You can refer it to the pch file.
-
-* `DebugTool` Tool files.
-
-    >To start and stop LLDebugTool, you need to look at the "LLDebugTool.h".
-
-* `Config`  Configuration file.
-
-    >For the custom color , size , identification and other information. If you want to configure anything, you need to focus on this file.
-
-* `Components`  Components files.
-
-    >If you're not interested in how the functionality works, you can ignore this folder.
-    >Each component folder is divided into `Function`and `UserInterface`, `Function` is the specific function implementation, `UserInterface`is the specific UI build.
-  
-  - `AppInfo` Use to monitoring app's properties, depend on `General`.
-  - `Crash` Used to collect crash information when an App crashes, depend on `LLStorageManager`.
-  - `Log` Used to quick print and save log, depend on `LLStorageManager`.
-  - `Network` Use to monitoring network request, depend on `LLStorageManager`.
-  - `Sandbox` Used to view and operate sandbox files, depend on `General`.
-  - `Screenshot` Used to process and display screenshots, depend on `General`.
-  - `LLStorageManager`  Used to data storage and reading, depend on `General`.
-  - `General` The basic component of other components, depend on `Config`.
-  
-## Communication
-
-- If you **need help**, open an issue.
-- If you'd like to **ask a general question**, open an issue.
-- If you **found a bug**, _and can provide steps to reliably reproduce it_, open an issue.
-- If you **have a feature request**, open an issue.
-- If you **find anything wrong or anything dislike**, open an issue.
-- If you **have some good ideas or some requests**, send mail(llworkinggroup1992@gmail.com) to me.
-- If you **want to contribute**, submit a pull request.
-
-## Contact
-
-- Send email to [llworkinggroup1992@gmail.com](llworkinggroup1992@gmail.com)
-- Send message in twitter [@HdbLi](https://twitter.com/HdbLi)
-- Send message in [JianShu](https://www.jianshu.com/u/a3c82fae85be)
-
-## Change-log
-
-A brief summary of each LLDebugTool release can be found in the [CHANGELOG](CHANGELOG.md). 
-
-## License
-
-This code is distributed under the terms and conditions of the [MIT license](LICENSE).
+   // Insert an LLog where you want to print.
+   LLog(@"Message you want to save or print.");
+   }
+   ```
+   
+   In Swift
+   
+   ```Swift
+   import LLDebugToolSwift
+   
+   func testNormalLog() {
+   // Insert an LLog where you want to print.
+   LLog.log(message: "Message you want to save or print.")
+   }
+   
+   ```
+   
+   * `Save Log with event and level`
+   
+   In Objective-C
+   
+   ```Objective-C
+   #import "LLDebug.h"
+   
+   - (void)testEventErrorLog {
+   // Insert an LLog_Error_Event where you want to print an event and level log.
+      LLog_Error_Event(@"The event that you want to mark. such as bugA, taskB or processC.",@"Message you want to save or print.");
+      }
+      ```
+      
+      In Swift
+      
+      ```Swift
+      import LLDebugToolSwift
+      
+      func testEventErrorLog() {
+      // Insert an LLog_Error_Event where you want to print an event and level log.
+      LLog.errorLog(message: "Message you want to save or print.", event: "The event that you want to mark. such as bugA, taskB or processC.")
+      }
+      ```
+      
+      ### Network Request
+      
+      You don't need to do anything, just call the "startWorking" will monitoring most of network requests, including the use of NSURLSession, NSURLConnection and AFNetworking. If you find that you can't be monitored in some cases, please open an issue and tell me.
+      
+      ### Crash
+      
+      You don't need to do anything, just call the "startWorking" to intercept the crash, store crash information, cause and stack informations, and also store the network requests and log informations at the this time.
+      
+      ### AppInfo
+      
+      LLDebugTool monitors the app's CPU, memory, and FPS. At the same time, you can also quickly check the various information of the app.
+      
+      ### Sandbox
+      
+      LLDebugTool provides a quick way to view and manipulate sandbox, you can easily delete the files/folders inside the sandbox, or you can share files/folders by airdrop elsewhere. As long as apple supports this file format, you can preview the files directly in LLDebugTool.
+      
+      ### More Usage
+      
+      * You can get more help by looking at the [Wiki](https://github.com/HDB-Li/LLDebugTool/wiki).
+      * You can download and run the [LLDebugToolDemo](https://github.com/HDB-Li/LLDebugTool/archive/master.zip) or [LLDebugToolSwiftDemo](https://github.com/HDB-Li/LLDebugToolSwift/archive/master.zip) to find more use with LLDebugTool. The demo is build under XCode9.3, ios 11.3 and cocoapods 1.5.0. If there is any version compatibility problem, please let me know.
+      
+      ## Requirements
+      
+      LLDebugTool works on iOS 8+ and requires ARC to build. It depends on the following Apple frameworks, which should already be included with most Xcode templates:
+      
+      * `UIKit`
+      
+      * `Foundation`
+      
+      * `SystemConfiguration`
+      
+      * `Photos`
+      
+      * `QuickLook`
+      
+      ## Architecture
+      
+      * `LLDebug.h` Public header file.
+      
+      >You can refer it to the pch file.
+      
+      * `DebugTool` Tool files.
+      
+      >To start and stop LLDebugTool, you need to look at the "LLDebugTool.h".
+      
+      * `Config`  Configuration file.
+      
+      >For the custom color , size , identification and other information. If you want to configure anything, you need to focus on this file.
+      
+      * `Components`  Components files.
+      
+      >If you're not interested in how the functionality works, you can ignore this folder.
+      >Each component folder is divided into `Function`and `UserInterface`, `Function` is the specific function implementation, `UserInterface`is the specific UI build.
+      
+      - `AppInfo` Use to monitoring app's properties, depend on `General`.
+      - `Crash` Used to collect crash information when an App crashes, depend on `LLStorageManager`.
+      - `Log` Used to quick print and save log, depend on `LLStorageManager`.
+      - `Network` Use to monitoring network request, depend on `LLStorageManager`.
+      - `Sandbox` Used to view and operate sandbox files, depend on `General`.
+      - `Screenshot` Used to process and display screenshots, depend on `General`.
+      - `LLStorageManager`  Used to data storage and reading, depend on `General`.
+      - `General` The basic component of other components, depend on `Config`.
+      
+      ## Communication
+      
+      - If you **need help**, open an issue.
+      - If you'd like to **ask a general question**, open an issue.
+      - If you **found a bug**, _and can provide steps to reliably reproduce it_, open an issue.
+      - If you **have a feature request**, open an issue.
+      - If you **find anything wrong or anything dislike**, open an issue.
+      - If you **have some good ideas or some requests**, send mail(llworkinggroup1992@gmail.com) to me.
+      - If you **want to contribute**, submit a pull request.
+      
+      ## Contact
+      
+      - Send email to [llworkinggroup1992@gmail.com](llworkinggroup1992@gmail.com)
+      - Send message in twitter [@HdbLi](https://twitter.com/HdbLi)
+      - Send message in [JianShu](https://www.jianshu.com/u/a3c82fae85be)
+      
+      ## Change-log
+      
+      A brief summary of each LLDebugTool release can be found in the [CHANGELOG](CHANGELOG.md). 
+      
+      ## License
+      
+      This code is distributed under the terms and conditions of the [MIT license](LICENSE).
