@@ -3,29 +3,29 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
-  - LLDebugTool (1.2.1):
-    - LLDebugTool/AppInfo (= 1.2.1)
-    - LLDebugTool/Crash (= 1.2.1)
-    - LLDebugTool/General (= 1.2.1)
-    - LLDebugTool/Log (= 1.2.1)
-    - LLDebugTool/Network (= 1.2.1)
-    - LLDebugTool/Sandbox (= 1.2.1)
-    - LLDebugTool/Screenshot (= 1.2.1)
-    - LLDebugTool/StorageManager (= 1.2.1)
-  - LLDebugTool/AppInfo (1.2.1):
+  - LLDebugTool (1.2.2):
+    - LLDebugTool/AppInfo (= 1.2.2)
+    - LLDebugTool/Crash (= 1.2.2)
+    - LLDebugTool/General (= 1.2.2)
+    - LLDebugTool/Log (= 1.2.2)
+    - LLDebugTool/Network (= 1.2.2)
+    - LLDebugTool/Sandbox (= 1.2.2)
+    - LLDebugTool/Screenshot (= 1.2.2)
+    - LLDebugTool/StorageManager (= 1.2.2)
+  - LLDebugTool/AppInfo (1.2.2):
     - LLDebugTool/General
-  - LLDebugTool/Crash (1.2.1):
+  - LLDebugTool/Crash (1.2.2):
     - LLDebugTool/StorageManager
-  - LLDebugTool/General (1.2.1)
-  - LLDebugTool/Log (1.2.1):
+  - LLDebugTool/General (1.2.2)
+  - LLDebugTool/Log (1.2.2):
     - LLDebugTool/StorageManager
-  - LLDebugTool/Network (1.2.1):
+  - LLDebugTool/Network (1.2.2):
     - LLDebugTool/StorageManager
-  - LLDebugTool/Sandbox (1.2.1):
+  - LLDebugTool/Sandbox (1.2.2):
     - LLDebugTool/General
-  - LLDebugTool/Screenshot (1.2.1):
+  - LLDebugTool/Screenshot (1.2.2):
     - LLDebugTool/General
-  - LLDebugTool/StorageManager (1.2.1):
+  - LLDebugTool/StorageManager (1.2.2):
     - FMDB
     - LLDebugTool/General
   - Moya (11.0.2):
@@ -37,7 +37,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
-  - LLDebugTool (= 1.2.1)
+  - LLDebugTool (= 1.2.2)
   - Moya (~> 11.0.0)
 
 SPEC REPOS:
@@ -51,10 +51,10 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  LLDebugTool: e4f0123a5aa5144bb235eb0040eb092b5888de04
+  LLDebugTool: 37e600681126878a2e398508e4ee82678aef21f2
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
 
-PODFILE CHECKSUM: e8828ba7cb346933d617fa921d3439ef3807a979
+PODFILE CHECKSUM: dbf1dd4cdb7406e87a59d0eb1b27c2b869494a5f
 
 COCOAPODS: 1.5.3
