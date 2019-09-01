@@ -12,7 +12,7 @@
 
 ## 简介
 
-[Click here for an English introduction](https://github.com/HDB-Li/LLDebugTool)
+[Click here for an English introduction](https://github.com/HDB-Li/LLDebugToolSwift)
 
 LLDebugTool是一款针对开发者和测试者的调试工具，它可以帮助你在非Xcode的情况下，进行数据分析和操作。
 
