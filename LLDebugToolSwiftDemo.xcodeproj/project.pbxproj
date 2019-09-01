@@ -27,6 +27,11 @@
 		75C3C7BAEB5DA6775A13824C /* Pods_LLDebugToolSwiftDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3780C4404350A00107BAAD /* Pods_LLDebugToolSwiftDemoTests.framework */; };
 		9B3FB081B8AD3B63B74EAB84 /* Pods_LLDebugToolSwiftDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48CCDFFC351EDFC7025E3FFD /* Pods_LLDebugToolSwiftDemoUITests.framework */; };
 		C4320D41214DFB41000CC110 /* MyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4320D40214DFB41000CC110 /* MyService.swift */; };
+		C481AD23231BDE6A004680C1 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = C481AD1E231BDE69004680C1 /* CHANGELOG.md */; };
+		C481AD24231BDE6A004680C1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C481AD1F231BDE69004680C1 /* README.md */; };
+		C481AD25231BDE6A004680C1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C481AD20231BDE69004680C1 /* LICENSE */; };
+		C481AD26231BDE6A004680C1 /* README-cn.md in Resources */ = {isa = PBXBuildFile; fileRef = C481AD21231BDE69004680C1 /* README-cn.md */; };
+		C481AD27231BDE6A004680C1 /* LLDebugToolSwift.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C481AD22231BDE6A004680C1 /* LLDebugToolSwift.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +86,11 @@
 		BD3780C4404350A00107BAAD /* Pods_LLDebugToolSwiftDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LLDebugToolSwiftDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C040A7CC9CE105726DF9305C /* Pods-LLDebugToolSwiftDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLDebugToolSwiftDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LLDebugToolSwiftDemoTests/Pods-LLDebugToolSwiftDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4320D40214DFB41000CC110 /* MyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyService.swift; sourceTree = "<group>"; };
+		C481AD1E231BDE69004680C1 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		C481AD1F231BDE69004680C1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C481AD20231BDE69004680C1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C481AD21231BDE69004680C1 /* README-cn.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "README-cn.md"; sourceTree = "<group>"; };
+		C481AD22231BDE6A004680C1 /* LLDebugToolSwift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LLDebugToolSwift.podspec; sourceTree = "<group>"; };
 		E45D43AD8FFE9A42E9D1CA87 /* Pods-LLDebugToolSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLDebugToolSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLDebugToolSwiftDemo/Pods-LLDebugToolSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 		FE2985D92B0F6630DB319AC0 /* Pods-LLDebugToolSwiftDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLDebugToolSwiftDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLDebugToolSwiftDemoUITests/Pods-LLDebugToolSwiftDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +126,11 @@
 		364A0593214917E70056719F = {
 			isa = PBXGroup;
 			children = (
+				C481AD1E231BDE69004680C1 /* CHANGELOG.md */,
+				C481AD20231BDE69004680C1 /* LICENSE */,
+				C481AD22231BDE6A004680C1 /* LLDebugToolSwift.podspec */,
+				C481AD21231BDE69004680C1 /* README-cn.md */,
+				C481AD1F231BDE69004680C1 /* README.md */,
 				364A05D0214922EF0056719F /* LLDebugToolSwift */,
 				364A059E214917E70056719F /* LLDebugToolSwiftDemo */,
 				364A05B3214917E70056719F /* LLDebugToolSwiftDemoTests */,
@@ -326,8 +341,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C481AD27231BDE6A004680C1 /* LLDebugToolSwift.podspec in Resources */,
 				364A05AA214917E70056719F /* LaunchScreen.storyboard in Resources */,
+				C481AD23231BDE6A004680C1 /* CHANGELOG.md in Resources */,
+				C481AD25231BDE6A004680C1 /* LICENSE in Resources */,
+				C481AD26231BDE6A004680C1 /* README-cn.md in Resources */,
 				367620F5214A648200F433EE /* Localizable.strings in Resources */,
+				C481AD24231BDE6A004680C1 /* README.md in Resources */,
 				364A05A7214917E70056719F /* Assets.xcassets in Resources */,
 				364A05A5214917E70056719F /* Main.storyboard in Resources */,
 				367620EF214A63B500F433EE /* InfoPlist.strings in Resources */,
@@ -357,7 +377,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LLDebugToolSwiftDemo/Pods-LLDebugToolSwiftDemo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-LLDebugToolSwiftDemo/Pods-LLDebugToolSwiftDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/LLDebugTool/LLDebugTool.framework",
@@ -374,7 +394,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LLDebugToolSwiftDemo/Pods-LLDebugToolSwiftDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LLDebugToolSwiftDemo/Pods-LLDebugToolSwiftDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C34B62C56B97F233FD5E9F7B /* [CP] Check Pods Manifest.lock */ = {
