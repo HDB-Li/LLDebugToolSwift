@@ -50,7 +50,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             UserDefaults.standard.set(false, forKey: "openCrash")
             UserDefaults.standard.synchronize()
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-                LLDebugTool.shared().showDebugViewController(with: 2)
+                LLDebugTool.shared().execute(.crash)
             }
         }
         
@@ -111,39 +111,70 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     }
     
     // MARK: - Actions
+    private func testColorConfig() {
+        let vc = TestColorStyleViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func testWindowStyle() {
+        let vc = TestWindowStyleViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func testNetwork() {
+        let vc = TestNetworkViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func testLog() {
+        let vc = TestLogViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func testCrash() {
+        let vc = TestCrashViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     private func testAppInfo() {
-        LLDebugTool.shared().showDebugViewController(with: 3)
+        LLDebugTool.shared().execute(.appInfo)
     }
     
     private func testSandbox() {
-        LLDebugTool.shared().showDebugViewController(with: 4)
+        LLDebugTool.shared().execute(.sandbox)
+    }
+    
+    private func testScreenshot() {
+        LLDebugTool.shared().execute(.convenientScreenshot)
+    }
+    
+    private func testHierarchy() {
+        let vc = TestHierarchyViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func testMagnifier() {
+        LLDebugTool.shared().execute(.magnifier)
+    }
+    
+    private func testRuler() {
+        LLDebugTool.shared().execute(.ruler)
+    }
+    
+    private func testWidgetBorder() {
+        LLDebugTool.shared().execute(.widgetBorder)
     }
     
     // MARK: - UITableView
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return 11
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 1
-        }
-        if section == 1 {
-            return 1
-        }
-        if section == 2 {
-            return 0
-        }
-        if section == 3 {
-            return 1
-        }
-        if section == 4 {
-            return 1
-        }
-        if section == 5 {
             return 2
         }
-        return 0
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -159,19 +190,6 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         cell.detailTextLabel?.numberOfLines = 0
         cell.accessoryType = .none
         if (indexPath.section == 0) {
-            cell.textLabel?.text = NSLocalizedString("test.network.request", comment: "")
-            cell.accessoryType = .disclosureIndicator
-        } else if (indexPath.section == 1) {
-            cell.textLabel?.text = NSLocalizedString("test.log", comment: "")
-            cell.accessoryType = .disclosureIndicator
-        } else if (indexPath.section == 2) {
-            cell.textLabel?.text = NSLocalizedString("test.crash", comment: "")
-            cell.accessoryType = .disclosureIndicator
-        } else if (indexPath.section == 3) {
-            cell.textLabel?.text = NSLocalizedString("app.info", comment: "")
-        } else if (indexPath.section == 4) {
-            cell.textLabel?.text = NSLocalizedString("sandbox.info", comment: "")
-        } else if (indexPath.section == 5) {
             if (indexPath.row == 0) {
                 cell.textLabel?.text = NSLocalizedString("test.color.style", comment: "")
                 cell.accessoryType = .disclosureIndicator
@@ -188,62 +206,105 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             } else if (indexPath.row == 1) {
                 cell.textLabel?.text = NSLocalizedString("test.window.style", comment: "")
                 cell.accessoryType = .disclosureIndicator
-                switch (LLConfig.shared().windowStyle) {
-                case .suspensionBall:
-                    cell.detailTextLabel?.text = "LLConfigWindowSuspensionBall"
+                switch (LLConfig.shared().entryWindowStyle) {
+                case .ball:
+                    cell.detailTextLabel?.text = "LLConfigEntryWindowStyleBall"
+                case .title:
+                    cell.detailTextLabel?.text = "LLConfigEntryWindowStyleTitle"
+                case .leading:
+                    cell.detailTextLabel?.text = "LLConfigEntryWindowStyleLeading"
+                case .trailing:
+                    cell.detailTextLabel?.text = "LLConfigEntryWindowStyleTrailing"
                 case .powerBar:
                     cell.detailTextLabel?.text = "LLConfigWindowPowerBar"
                 case .netBar:
                     cell.detailTextLabel?.text = "LLConfigWindowNetBar"
                 }
             }
+        } else if (indexPath.section == 1) {
+            cell.textLabel?.text = NSLocalizedString("test.network.request", comment: "")
+            cell.accessoryType = .disclosureIndicator
+        } else if (indexPath.section == 2) {
+            cell.textLabel?.text = NSLocalizedString("test.log", comment: "")
+            cell.accessoryType = .disclosureIndicator
+        } else if (indexPath.section == 3) {
+            cell.textLabel?.text = NSLocalizedString("test.crash", comment: "")
+            cell.accessoryType = .disclosureIndicator
+        } else if (indexPath.section == 4) {
+            cell.textLabel?.text = NSLocalizedString("app.info", comment: "")
+        } else if (indexPath.section == 5) {
+            cell.textLabel?.text = NSLocalizedString("sandbox.info", comment: "")
+        } else if (indexPath.section == 6) {
+            cell.textLabel?.text = NSLocalizedString("test.screenshot", comment: "")
+        } else if (indexPath.section == 7) {
+            cell.textLabel?.text = NSLocalizedString("test.hierarchy", comment: "")
+            cell.accessoryType = .disclosureIndicator
+        } else if (indexPath.section == 8) {
+            cell.textLabel?.text = NSLocalizedString("test.magnifier", comment: "")
+        } else if (indexPath.section == 9) {
+            cell.textLabel?.text = NSLocalizedString("test.ruler", comment: "")
+        } else if (indexPath.section == 10) {
+            cell.textLabel?.text = NSLocalizedString("test.widget.border", comment: "")
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (indexPath.section == 0) {
-            let vc = TestNetworkViewController(style: .grouped)
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if (indexPath.section == 1) {
-            let vc = TestLogViewController(style: .grouped)
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if (indexPath.section == 2) {
-            LLTool.toastMessage("A little bug, Fix soon.")
-            return
-            let vc = TestCrashViewController(style: .grouped)
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if (indexPath.section == 3) {
-            self.testAppInfo()
-        } else if (indexPath.section == 4) {
-            self.testSandbox()
-        } else if (indexPath.section == 5) {
             if (indexPath.row == 0) {
-                let vc = TestColorStyleViewController(style: .grouped)
-                self.navigationController?.pushViewController(vc, animated: true)
+                testColorConfig()
             } else if (indexPath.row == 1) {
-                let vc = TestWindowStyleViewController(style: .grouped)
-                self.navigationController?.pushViewController(vc, animated: true)
+                testWindowStyle()
             }
+        } else if (indexPath.section == 1) {
+            testNetwork()
+        } else if (indexPath.section == 2) {
+            testLog()
+        } else if (indexPath.section == 3) {
+            testCrash()
+        } else if (indexPath.section == 4) {
+            testAppInfo()
+        } else if (indexPath.section == 5) {
+            testSandbox()
+        } else if (indexPath.section == 6) {
+            testScreenshot()
+        } else if (indexPath.section == 7) {
+            testHierarchy()
+        } else if (indexPath.section == 8) {
+            testMagnifier()
+        } else if (indexPath.section == 9) {
+            testRuler()
+        } else if (indexPath.section == 10) {
+            testWidgetBorder()
         }
         self.tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if (section == 0) {
-            return "Network Request"
-        } else if (section == 1) {
-            return "Log"
-        } else if (section == 2) {
-//            return "Crash"
-        } else if (section == 3) {
-            return "App Info"
-        } else if (section == 4) {
-            return "Sandbox Info"
-        } else if (section == 5) {
             return "LLConfig"
+        } else if (section == 1) {
+            return "Network Request"
+        } else if (section == 2) {
+            return "Log"
+        } else if (section == 3) {
+            return "Crash"
+        } else if (section == 4) {
+            return "App Info"
+        } else if (section == 5) {
+            return "Sandbox Info"
+        } else if (section == 6) {
+            return "Screen Shot"
+        } else if (section == 7) {
+            return "Hierarchy"
+        } else if (section == 8) {
+            return "Magnifier"
+        } else if (section == 9) {
+            return "Ruler"
+        } else if (section == 10) {
+            return "Widget Border"
         }
-        return nil;
+        return nil
     }
 }
 

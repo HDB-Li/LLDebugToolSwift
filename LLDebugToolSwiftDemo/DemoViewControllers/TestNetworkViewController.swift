@@ -57,7 +57,7 @@ class TestNetworkViewController: BaseTestViewController {
         let url = "http://baike.baidu.com/api/openapi/BaikeLemmaCardApi?&format=json&appid=379020&bk_key=%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85&bk_length=600"
         // Use Alamofire
         Alamofire.request(url).responseJSON { (response) in
-            LLDebugTool.shared().showDebugViewController(with: 0)
+            LLDebugTool.shared().execute(.network)
         }
     }
     
@@ -66,7 +66,7 @@ class TestNetworkViewController: BaseTestViewController {
         var request = URLRequest(url: URL(string: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525346881086&di=b234c66c82427034962131d20e9f6b56&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F011cf15548caf50000019ae9c5c728.jpg%402o.jpg")!)
         request.httpMethod = "GET"
         NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue()) { (response, data, error) in
-            LLDebugTool.shared().showDebugViewController(with: 0)
+            LLDebugTool.shared().execute(.network)
         }
     }
     
@@ -74,7 +74,7 @@ class TestNetworkViewController: BaseTestViewController {
         //NSURLSession
         let request = URLRequest(url: URL(string: "https://www.baidu.com")!)
         let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            LLDebugTool.shared().showDebugViewController(with: 0)
+            LLDebugTool.shared().execute(.network)
         }
         dataTask.resume()
     }
@@ -83,7 +83,7 @@ class TestNetworkViewController: BaseTestViewController {
         // Moya
         let provider = MoyaProvider<MyService>()
         provider.request(.zen) { (result) in
-            LLDebugTool.shared().showDebugViewController(with: 0)
+            LLDebugTool.shared().execute(.network)
         }
     }
 }

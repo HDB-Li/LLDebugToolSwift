@@ -58,8 +58,8 @@ class TestCrashViewController: BaseTestViewController {
         footer.addSubview(tip2)
         footer.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 10 + imageViewHeight + tipHeight + 10 + imageViewHeight + tipHeight + 10)
 
-        self.tableView.tableHeaderView = header;
-        self.tableView.tableFooterView = footer;
+        self.tableView.tableHeaderView = header
+        self.tableView.tableFooterView = footer
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -71,14 +71,14 @@ class TestCrashViewController: BaseTestViewController {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         if (indexPath.row == 0) {
-            cell.textLabel?.text = NSLocalizedString("try.array.crash", comment: "");
-            cell.detailTextLabel?.text = NSLocalizedString("crash.info", comment: "");
+            cell.textLabel?.text = NSLocalizedString("try.array.crash", comment: "")
+            cell.detailTextLabel?.text = NSLocalizedString("crash.info", comment: "")
         } else if (indexPath.row == 1) {
-            cell.textLabel?.text = NSLocalizedString("try.pointer.crash", comment: "");
-            cell.detailTextLabel?.text = NSLocalizedString("crash.info", comment: "");
+            cell.textLabel?.text = NSLocalizedString("try.pointer.crash", comment: "")
+            cell.detailTextLabel?.text = NSLocalizedString("crash.info", comment: "")
         } else if (indexPath.row == 2) {
-            cell.textLabel?.text = NSLocalizedString("try.signal", comment: "");
-            cell.detailTextLabel?.text = NSLocalizedString("signal.info", comment: "");
+            cell.textLabel?.text = NSLocalizedString("try.signal", comment: "")
+            cell.detailTextLabel?.text = NSLocalizedString("signal.info", comment: "")
         }
         
         return cell
@@ -117,7 +117,7 @@ class TestCrashViewController: BaseTestViewController {
         UserDefaults.standard.synchronize()
         kill(0, SIGTRAP)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-            LLDebugTool.shared().showDebugViewController(with: 2)
+            LLDebugTool.shared().execute(.crash)
             UserDefaults.standard.set(false, forKey: "openCrash")
             UserDefaults.standard.synchronize()
         }

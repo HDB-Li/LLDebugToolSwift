@@ -24,6 +24,7 @@
 		36762101214A6D9F00F433EE /* TestLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36762100214A6D9F00F433EE /* TestLogViewController.swift */; };
 		36762103214A6DA800F433EE /* TestNetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36762102214A6DA800F433EE /* TestNetworkViewController.swift */; };
 		36762105214A6DB300F433EE /* TestWindowStyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36762104214A6DB300F433EE /* TestWindowStyleViewController.swift */; };
+		36FB8E6D23409F5C00ACB6CB /* TestHierarchyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB8E6C23409F5C00ACB6CB /* TestHierarchyViewController.swift */; };
 		75C3C7BAEB5DA6775A13824C /* Pods_LLDebugToolSwiftDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3780C4404350A00107BAAD /* Pods_LLDebugToolSwiftDemoTests.framework */; };
 		9B3FB081B8AD3B63B74EAB84 /* Pods_LLDebugToolSwiftDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48CCDFFC351EDFC7025E3FFD /* Pods_LLDebugToolSwiftDemoUITests.framework */; };
 		C4320D41214DFB41000CC110 /* MyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4320D40214DFB41000CC110 /* MyService.swift */; };
@@ -80,6 +81,7 @@
 		36762100214A6D9F00F433EE /* TestLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLogViewController.swift; sourceTree = "<group>"; };
 		36762102214A6DA800F433EE /* TestNetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkViewController.swift; sourceTree = "<group>"; };
 		36762104214A6DB300F433EE /* TestWindowStyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWindowStyleViewController.swift; sourceTree = "<group>"; };
+		36FB8E6C23409F5C00ACB6CB /* TestHierarchyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHierarchyViewController.swift; sourceTree = "<group>"; };
 		48CCDFFC351EDFC7025E3FFD /* Pods_LLDebugToolSwiftDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LLDebugToolSwiftDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB594A6FA49274F4506B10D /* Pods-LLDebugToolSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLDebugToolSwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LLDebugToolSwiftDemo/Pods-LLDebugToolSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		6CB7EDE77CABE52E9125F0D6 /* Pods-LLDebugToolSwiftDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLDebugToolSwiftDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLDebugToolSwiftDemoTests/Pods-LLDebugToolSwiftDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				36762100214A6D9F00F433EE /* TestLogViewController.swift */,
 				36762102214A6DA800F433EE /* TestNetworkViewController.swift */,
 				36762104214A6DB300F433EE /* TestWindowStyleViewController.swift */,
+				36FB8E6C23409F5C00ACB6CB /* TestHierarchyViewController.swift */,
 			);
 			path = DemoViewControllers;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/LLDebugTool/LLDebugTool.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
@@ -389,6 +393,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LLDebugTool.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
@@ -463,6 +468,7 @@
 				36762105214A6DB300F433EE /* TestWindowStyleViewController.swift in Sources */,
 				367620FD214A6D8700F433EE /* TestColorStyleViewController.swift in Sources */,
 				36762101214A6D9F00F433EE /* TestLogViewController.swift in Sources */,
+				36FB8E6D23409F5C00ACB6CB /* TestHierarchyViewController.swift in Sources */,
 				36762103214A6DA800F433EE /* TestNetworkViewController.swift in Sources */,
 				364A05D2214922EF0056719F /* LLog.swift in Sources */,
 				367620FB214A6D6400F433EE /* BaseTestViewController.swift in Sources */,
@@ -667,6 +673,7 @@
 				INFOPLIST_FILE = LLDebugToolSwiftDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = myCompany.HDB.LLDebugToolSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -684,6 +691,7 @@
 				INFOPLIST_FILE = LLDebugToolSwiftDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = myCompany.HDB.LLDebugToolSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

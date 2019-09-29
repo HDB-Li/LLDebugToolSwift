@@ -24,11 +24,11 @@ class TestLogViewController: BaseTestViewController {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         if (indexPath.row == 0) {
-            cell.textLabel?.text = NSLocalizedString("insert.log", comment: "");
+            cell.textLabel?.text = NSLocalizedString("insert.log", comment: "")
         } else if (indexPath.row == 1) {
-            cell.textLabel?.text = NSLocalizedString("insert.error.log", comment: "");
+            cell.textLabel?.text = NSLocalizedString("insert.error.log", comment: "")
         } else if (indexPath.row == 2) {
-            cell.textLabel?.text = NSLocalizedString("insert.call.log", comment: "");
+            cell.textLabel?.text = NSLocalizedString("insert.call.log", comment: "")
         }
         
         return cell
@@ -48,17 +48,17 @@ class TestLogViewController: BaseTestViewController {
     // MARK: - ACTIONS
     func testNormalLog() {
         LLog.log(message: NSLocalizedString("normal.log.info", comment: ""))
-        LLDebugTool.shared().showDebugViewController(with: 1)
+        LLDebugTool.shared().execute(.log)
     }
     
     func testErrorLog() {
         LLog.errorLog(message: NSLocalizedString("error.log.info", comment: ""))
-        LLDebugTool.shared().showDebugViewController(with: 1)
+        LLDebugTool.shared().execute(.log)
     }
     
     func testEventLog() {
         LLog.errorLog(message: NSLocalizedString("call.log.info", comment: ""), event: NSLocalizedString("call", comment: ""))
-        LLDebugTool.shared().showDebugViewController(with: 1)
+        LLDebugTool.shared().execute(.log)
     }
 
 }

@@ -1,3 +1,11 @@
+## [1.3.2](https://github.com/HDB-Li/LLDebugToolSwift/releases/tag/1.3.2) (09/29/2019)
+
+###  Synchronous update
+
+#### Update
+
+* Update `LLog.swift`, In order to solve `LLLogHelper` isn't public in `LLDebugTool`.
+
 ## [1.3.1](https://github.com/HDB-Li/LLDebugToolSwift/releases/tag/1.3.1) (09/06/2019)
 
 ###  Synchronous update

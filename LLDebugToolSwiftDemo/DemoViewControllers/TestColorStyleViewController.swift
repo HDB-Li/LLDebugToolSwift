@@ -33,7 +33,7 @@ class TestColorStyleViewController: BaseTestViewController {
             cell.textLabel?.text = "Use \"LLConfigColorStyleSystem\""
             cell.accessoryType = LLConfig.shared().colorStyle == .system ? .checkmark : .none
         } else if (indexPath.row == 3) {
-            cell.textLabel?.text = "Use \"[[LLConfig sharedConfig] configBackgroundColor:[UIColor orangeColor] textColor:[UIColor whiteColor] statusBarStyle:UIStatusBarStyleDefault]\""
+            cell.textLabel?.text = "Use \"[[LLConfig sharedConfig] configBackgroundColor:[UIColor orangeColor] primaryColor:[UIColor whiteColor] statusBarStyle:UIStatusBarStyleDefault]\""
             cell.accessoryType = LLConfig.shared().colorStyle == .custom ? .checkmark : .none
         }
         
@@ -56,22 +56,22 @@ class TestColorStyleViewController: BaseTestViewController {
     // MARK: - ACTIONS
     func testHackColorStyle() {
         LLConfig.shared().colorStyle = .hack
-        LLDebugTool.shared().showDebugViewController(with: 0)
+        LLDebugTool.shared().execute(.function)
     }
     
     func testSimpleColorSytle() {
         LLConfig.shared().colorStyle = .simple
-        LLDebugTool.shared().showDebugViewController(with: 0)
+        LLDebugTool.shared().execute(.function)
     }
     
     func testSystemColorStyle() {
         LLConfig.shared().colorStyle = .system
-        LLDebugTool.shared().showDebugViewController(with: 0)
+        LLDebugTool.shared().execute(.function)
     }
     
     func testCustomColorConfig() {
-        LLConfig.shared().configBackgroundColor(.orange, textColor: .white, statusBarStyle: .default)
-        LLDebugTool.shared().showDebugViewController(with: 0)
+        LLConfig.shared().configBackgroundColor(.orange, primaryColor: .white, statusBarStyle: .default)
+        LLDebugTool.shared().execute(.function)
     }
 
 }

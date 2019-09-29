@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                = "LLDebugToolSwift"
-  s.version             = "1.3.1"
+  s.version             = "1.3.2"
   s.summary             = "LLDebugTool is a debugging tool for developers and testers that can help you analyze and manipulate data in non-xcode situations."
   s.homepage            = "https://github.com/HDB-Li/LLDebugToolSwift"
   s.license             = "MIT"
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.requires_arc        = true
   s.source_files	    = "LLDebugToolSwift/**/*.{h,m,swift}"
 #  s.resources		    = "LLDebugToolSwift/**/*.{xib,storyboard,bundle}"
-  s.dependency            "LLDebugTool" , '1.3.1'
+  s.dependency            "LLDebugTool" , '1.3.2'
   s.swift_version	    = "4.0"
 
 end
