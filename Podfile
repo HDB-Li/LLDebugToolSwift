@@ -7,7 +7,7 @@ target 'LLDebugToolSwiftDemo' do
 
   # Pods for LLDebugToolSwiftDemo
 
-  pod 'LLDebugTool' , '1.3.3'
+  pod 'LLDebugTool' , '1.3.4'
 
   pod 'Alamofire' , '~> 4.7'
 

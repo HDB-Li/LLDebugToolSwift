@@ -38,6 +38,9 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imgView.tag = 101
+        
         // Try to get album permission, and if possible, screenshots are stored in the album at the same time.
         PHPhotoLibrary.requestAuthorization { (status) in
             
