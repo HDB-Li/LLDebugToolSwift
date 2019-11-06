@@ -63,7 +63,7 @@ class TestCrashViewController: BaseTestViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -79,6 +79,9 @@ class TestCrashViewController: BaseTestViewController {
         } else if (indexPath.row == 2) {
             cell.textLabel?.text = NSLocalizedString("try.signal", comment: "")
             cell.detailTextLabel?.text = NSLocalizedString("signal.info", comment: "")
+        } else if (indexPath.row == 3) {
+            cell.textLabel?.text = NSLocalizedString("try.swift.signal", comment: "")
+            cell.detailTextLabel?.text = NSLocalizedString("signal.info", comment: "")
         }
         
         return cell
@@ -91,6 +94,8 @@ class TestCrashViewController: BaseTestViewController {
             self.testPointErrorCrash()
         } else if (indexPath.row == 2) {
             self.testSignalCrash()
+        } else if (indexPath.row == 3) {
+            self.testSwiftOptionalCrash()
         }
         tableView.reloadData()
     }
@@ -123,4 +128,9 @@ class TestCrashViewController: BaseTestViewController {
         }
     }
 
+    func testSwiftOptionalCrash() {
+        let name : String? = nil
+        print(name!)
+    }
+    
 }

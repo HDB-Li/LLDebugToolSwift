@@ -24,6 +24,7 @@
 "try.array.crash" = "Try crash with out of range in array";
 "try.pointer.crash" = "Try crash with pointer error";
 "try.signal" = "Try receive a SIGTRAP signal";
+"try.swift.signal" = "Try swift optional crash";
 "crash.info" = "Please rerun the project after the crash and check the information";
 "signal.info" = "You must insert a Symbolic breakpoint first";
 
