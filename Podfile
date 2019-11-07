@@ -7,11 +7,11 @@ target 'LLDebugToolSwiftDemo' do
 
   # Pods for LLDebugToolSwiftDemo
 
-  pod 'LLDebugTool' , '1.3.4'
+  pod 'LLDebugTool' , '1.3.5'
 
-  pod 'Alamofire' , '~> 4.7'
+  pod 'Alamofire' , '4.7.3'
 
-  pod 'Moya' , '~> 11.0.0'
+  pod 'Moya' , '11.0.2'
 
   target 'LLDebugToolSwiftDemoTests' do
     inherit! :search_paths
