@@ -22,16 +22,14 @@
 //  SOFTWARE.
 
 #import "LLConfig.h"
-#import "LLFactory.h"
-#import "LLConst.h"
+
 #import "LLThemeManager.h"
-#import "LLTool.h"
 #import "LLDebugTool.h"
-#import "LLNetworkHelper.h"
-#import "LLLogHelper.h"
-#import "LLCrashHelper.h"
-#import "LLAppInfoHelper.h"
-#import "LLScreenshotHelper.h"
+#import "LLFactory.h"
+#import "LLRouter.h"
+#import "LLConfig.h"
+#import "LLConst.h"
+#import "LLTool.h"
 
 static LLConfig *_instance = nil;
 
@@ -89,11 +87,11 @@ NSNotificationName const LLConfigDidUpdateWindowStyleNotificationName = @"LLConf
             BOOL crashEnable = availables & LLConfigAvailableCrash;
             BOOL appInfoEnable = availables & LLConfigAvailableAppInfo;
             BOOL screenshotEnable = availables & LLConfigAvailableScreenshot;
-            [[LLNetworkHelper shared] setEnable:networkEnable];
-            [[LLLogHelper shared] setEnable:logEnable];
-            [[LLCrashHelper shared] setEnable:crashEnable];
-            [[LLAppInfoHelper shared] setEnable:appInfoEnable];
-            [[LLScreenshotHelper shared] setEnable:screenshotEnable];
+            [LLRouter setNetworkHelperEnable:networkEnable];
+            [LLRouter setLogHelperEnable:logEnable];
+            [LLRouter setCrashHelperEnable:crashEnable];
+            [LLRouter setAppInfoHelperEnable:appInfoEnable];
+            [LLRouter setScreenshotHelperEnable:screenshotEnable];
         }
     }
 }
@@ -141,12 +139,8 @@ NSNotificationName const LLConfigDidUpdateWindowStyleNotificationName = @"LLConf
     _folderPath = [doc stringByAppendingPathComponent:@"LLDebugTool"];
     
     // Set XIB resources.
-    _XIBBundle = [NSBundle bundleForClass:self.class];
     NSString *imageBundlePath = [[NSBundle bundleForClass:self.class] pathForResource:@"LLDebugTool" ofType:@"bundle"];
     _imageBundle = [NSBundle bundleWithPath:imageBundlePath];
-    if (!_XIBBundle) {
-        [LLTool log:@"Failed to load the XIB bundle"];
-    }
     if (!_imageBundle) {
         [LLTool log:@"Failed to load the image bundle"];
     }
@@ -166,18 +160,17 @@ NSNotificationName const LLConfigDidUpdateWindowStyleNotificationName = @"LLConf
     _shrinkToEdgeWhenInactive = YES;
     _shakeToHide = YES;
     
+#ifdef LLDEBUGTOOL_MAGNIFIER
     // Set default magnifier properties.
-    _magnifierZoomLevel = kLLMagnifierWindowZoomLevel;
-    _magnifierSize = kLLMagnifierWindowSize;
-    
+    self.magnifierZoomLevel = kLLMagnifierWindowZoomLevel;
+    self.magnifierSize = kLLMagnifierWindowSize;
+#endif
+#ifdef LLDEBUGTOOL_HIERARCHY
     // Set hierarchy
-    _hierarchyIgnorePrivateClass = YES;
-    
+    self.hierarchyIgnorePrivateClass = YES;
+#endif
     // Show LLDebugTool's log.
     _autoCheckDebugToolVersion = YES;
-    
-    // Set log style.
-    _logStyle = LLConfigLogDetail;
     
     // Click action
     _clickAction = LLDebugToolActionFunction;

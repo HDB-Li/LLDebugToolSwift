@@ -33,26 +33,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        //####################### Color Style #######################//
-        // Uncomment one of the following lines to change the color configuration.
-        // LLConfig.shared().colorStyle = .system
-        // LLConfig.shared().configBackgroundColor(.orange, textColor: .white, statusBarStyle: .default)
-        
-        //####################### User Identity #######################//
-        // Use this line to tag user. More config please see "LLConfig.h".
-        LLConfig.shared().userIdentity = "Miss L";
-        
-        //####################### Window Style #######################//
-        // Uncomment one of the following lines to change the window style.
-        // LLConfig.shared().windowStyle = .netBar
-        
-        //####################### Features #######################//
-        // Uncomment this line to change the available features.
-        // LLConfig.shared().availables = .noneAppInfo
-        
-        // ####################### Start LLDebugTool #######################//
-        // Use this line to start working.
-        LLDebugTool.shared().startWorking()
+        // Start working with config.
+        LLDebugTool.shared().startWorking { (config) in
+            
+            //####################### Color Style #######################//
+            // Uncomment one of the following lines to change the color configuration.
+            // config.colorStyle = .system
+            // config.configBackgroundColor(.orange, primaryColor: .white, statusBarStyle: .default)
+            
+            //####################### User Identity #######################//
+            // Use this line to tag user. More config please see "LLConfig.h".
+            config.userIdentity = "Miss L";
+            
+            //####################### Window Style #######################//
+            // Uncomment one of the following lines to change the window style.
+            // config.windowStyle = .netBar
+            
+            //####################### Html #######################//
+            config.defaultHtmlUrl = "https://github.com/HDB-Li/LLDebugTool";
+        }
         
         return true
     }

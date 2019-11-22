@@ -34,6 +34,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    private var locationManager :CLLocationManager!
     private let cellID = "cellID"
     
     override func viewDidLoad() {
@@ -45,6 +46,9 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         PHPhotoLibrary.requestAuthorization { (status) in
             
         }
+        
+        locationManager = CLLocationManager()
+        locationManager.requestWhenInUseAuthorization()
         
         // LLDebugTool need time to start.
         sleep(1)
@@ -89,8 +93,8 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
                     if array2.count >= 2 {
                         let newVersion = array2[0]
                         if newVersion.components(separatedBy: ".").count == 3 {
-                            if LLDebugTool.shared().version.compare(newVersion) == .orderedAscending {
-                                let vc = UIAlertController(title: "Note", message: String(format: "%@\nNew Version : %@\nCurrent Version : %@", arguments: [NSLocalizedString("new.version", comment: ""),newVersion,LLDebugTool.shared().version]), preferredStyle: .alert)
+                            if LLDebugTool.version().compare(newVersion) == .orderedAscending {
+                                let vc = UIAlertController(title: "Note", message: String(format: "%@\nNew Version : %@\nCurrent Version : %@", arguments: [NSLocalizedString("new.version", comment: ""),newVersion,LLDebugTool.version()]), preferredStyle: .alert)
                                 let action = UIAlertAction(title: "I known", style: .default, handler: nil)
                                 vc.addAction(action)
                                 self.present(vc, animated: true, completion: nil)
@@ -168,9 +172,19 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         LLDebugTool.shared().execute(.widgetBorder)
     }
     
+    private func testHtml() {
+        let vc = TestHtmlViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func testLocation() {
+        let vc = TestLocationViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     // MARK: - UITableView
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 11
+        return 13
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -248,6 +262,12 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             cell.textLabel?.text = NSLocalizedString("test.ruler", comment: "")
         } else if (indexPath.section == 10) {
             cell.textLabel?.text = NSLocalizedString("test.widget.border", comment: "")
+        } else if (indexPath.section == 11) {
+            cell.textLabel?.text = NSLocalizedString("test.html", comment: "")
+            cell.accessoryType = .disclosureIndicator
+        } else if (indexPath.section == 12) {
+            cell.textLabel?.text = NSLocalizedString("test.location", comment: "")
+            cell.accessoryType = .disclosureIndicator
         }
         return cell
     }
@@ -279,6 +299,10 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             testRuler()
         } else if (indexPath.section == 10) {
             testWidgetBorder()
+        } else if (indexPath.section == 11) {
+            testHtml()
+        } else if (indexPath.section == 12) {
+            testLocation()
         }
         self.tableView.reloadData()
     }
@@ -306,6 +330,10 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             return "Ruler"
         } else if (section == 10) {
             return "Widget Border"
+        } else if (section == 11) {
+            return "Html"
+        } else if (section == 12) {
+            return "Location"
         }
         return nil
     }

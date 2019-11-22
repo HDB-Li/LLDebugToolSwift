@@ -16,6 +16,9 @@
 		364A05B5214917E70056719F /* LLDebugToolSwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A05B4214917E70056719F /* LLDebugToolSwiftDemoTests.swift */; };
 		364A05C0214917E80056719F /* LLDebugToolSwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A05BF214917E80056719F /* LLDebugToolSwiftDemoUITests.swift */; };
 		364A05D2214922EF0056719F /* LLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A05D1214922EF0056719F /* LLog.swift */; };
+		3652EDEA23876CD500D5D531 /* TestHtmlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3652EDE923876CD500D5D531 /* TestHtmlViewController.swift */; };
+		3652EDEC23876CEA00D5D531 /* CustomWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3652EDEB23876CEA00D5D531 /* CustomWebViewController.swift */; };
+		3652EDEE23876CF600D5D531 /* TestLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3652EDED23876CF600D5D531 /* TestLocationViewController.swift */; };
 		367620EF214A63B500F433EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 367620F1214A63B500F433EE /* InfoPlist.strings */; };
 		367620F5214A648200F433EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 367620F7214A648200F433EE /* Localizable.strings */; };
 		367620FB214A6D6400F433EE /* BaseTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367620FA214A6D6400F433EE /* BaseTestViewController.swift */; };
@@ -69,6 +72,9 @@
 		364A05BF214917E80056719F /* LLDebugToolSwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLDebugToolSwiftDemoUITests.swift; sourceTree = "<group>"; };
 		364A05C1214917E80056719F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		364A05D1214922EF0056719F /* LLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLog.swift; sourceTree = "<group>"; };
+		3652EDE923876CD500D5D531 /* TestHtmlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHtmlViewController.swift; sourceTree = "<group>"; };
+		3652EDEB23876CEA00D5D531 /* CustomWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWebViewController.swift; sourceTree = "<group>"; };
+		3652EDED23876CF600D5D531 /* TestLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLocationViewController.swift; sourceTree = "<group>"; };
 		367620F0214A63B500F433EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		367620F2214A647C00F433EE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		367620F3214A647C00F433EE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -128,9 +134,9 @@
 		364A0593214917E70056719F = {
 			isa = PBXGroup;
 			children = (
+				C481AD22231BDE6A004680C1 /* LLDebugToolSwift.podspec */,
 				C481AD1E231BDE69004680C1 /* CHANGELOG.md */,
 				C481AD20231BDE69004680C1 /* LICENSE */,
-				C481AD22231BDE6A004680C1 /* LLDebugToolSwift.podspec */,
 				C481AD21231BDE69004680C1 /* README-cn.md */,
 				C481AD1F231BDE69004680C1 /* README.md */,
 				364A05D0214922EF0056719F /* LLDebugToolSwift */,
@@ -200,12 +206,15 @@
 			isa = PBXGroup;
 			children = (
 				367620FA214A6D6400F433EE /* BaseTestViewController.swift */,
-				367620FC214A6D8700F433EE /* TestColorStyleViewController.swift */,
-				367620FE214A6D9400F433EE /* TestCrashViewController.swift */,
-				36762100214A6D9F00F433EE /* TestLogViewController.swift */,
 				36762102214A6DA800F433EE /* TestNetworkViewController.swift */,
+				36762100214A6D9F00F433EE /* TestLogViewController.swift */,
+				367620FE214A6D9400F433EE /* TestCrashViewController.swift */,
+				367620FC214A6D8700F433EE /* TestColorStyleViewController.swift */,
 				36762104214A6DB300F433EE /* TestWindowStyleViewController.swift */,
 				36FB8E6C23409F5C00ACB6CB /* TestHierarchyViewController.swift */,
+				3652EDE923876CD500D5D531 /* TestHtmlViewController.swift */,
+				3652EDEB23876CEA00D5D531 /* CustomWebViewController.swift */,
+				3652EDED23876CF600D5D531 /* TestLocationViewController.swift */,
 			);
 			path = DemoViewControllers;
 			sourceTree = "<group>";
@@ -462,12 +471,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				367620FF214A6D9400F433EE /* TestCrashViewController.swift in Sources */,
+				3652EDEC23876CEA00D5D531 /* CustomWebViewController.swift in Sources */,
 				C4320D41214DFB41000CC110 /* MyService.swift in Sources */,
 				36762105214A6DB300F433EE /* TestWindowStyleViewController.swift in Sources */,
+				3652EDEE23876CF600D5D531 /* TestLocationViewController.swift in Sources */,
 				367620FD214A6D8700F433EE /* TestColorStyleViewController.swift in Sources */,
 				36762101214A6D9F00F433EE /* TestLogViewController.swift in Sources */,
 				36FB8E6D23409F5C00ACB6CB /* TestHierarchyViewController.swift in Sources */,
 				36762103214A6DA800F433EE /* TestNetworkViewController.swift in Sources */,
+				3652EDEA23876CD500D5D531 /* TestHtmlViewController.swift in Sources */,
 				364A05D2214922EF0056719F /* LLog.swift in Sources */,
 				367620FB214A6D6400F433EE /* BaseTestViewController.swift in Sources */,
 				364A05A2214917E70056719F /* ViewController.swift in Sources */,
@@ -671,7 +683,7 @@
 				INFOPLIST_FILE = LLDebugToolSwiftDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.3.6;
+				MARKETING_VERSION = 1.3.7;
 				PRODUCT_BUNDLE_IDENTIFIER = myCompany.HDB.LLDebugToolSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -689,7 +701,7 @@
 				INFOPLIST_FILE = LLDebugToolSwiftDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.3.6;
+				MARKETING_VERSION = 1.3.7;
 				PRODUCT_BUNDLE_IDENTIFIER = myCompany.HDB.LLDebugToolSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
