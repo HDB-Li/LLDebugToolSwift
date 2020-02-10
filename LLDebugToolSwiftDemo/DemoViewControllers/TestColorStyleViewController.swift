@@ -70,7 +70,7 @@ class TestColorStyleViewController: BaseTestViewController {
     }
     
     func testCustomColorConfig() {
-        LLConfig.shared().configBackgroundColor(.orange, primaryColor: .white, statusBarStyle: .default)
+        LLConfig.shared().configPrimaryColor(.white, backgroundColor: .orange, statusBarStyle: .default)
         LLDebugTool.shared().execute(.function)
     }
 

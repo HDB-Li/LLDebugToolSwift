@@ -217,6 +217,24 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
                     cell.detailTextLabel?.text = "LLConfigColorStyleSimple"
                 case .system:
                     cell.detailTextLabel?.text = "LLConfigColorStyleSystem"
+                case .grass:
+                    cell.detailTextLabel?.text = "LLConfigColorStyleGrass"
+                case .homebrew:
+                    cell.detailTextLabel?.text = "LLConfigColorStyleHomebrew"
+                case .manPage:
+                    cell.detailTextLabel?.text = "LLConfigColorStyleManPage"
+                case .novel:
+                    cell.detailTextLabel?.text = "LLConfigColorStyleNovel"
+                case .ocean:
+                    cell.detailTextLabel?.text = "LLConfigColorStyleOcean"
+                case .pro:
+                    cell.detailTextLabel?.text = "LLConfigColorStylePro"
+                case .redSands:
+                    cell.detailTextLabel?.text = "LLConfigColorStyleRedSands"
+                case .silverAerogel:
+                    cell.detailTextLabel?.text = "LLConfigColorStyleSilverAerogel"
+                case .solidColors:
+                    cell.detailTextLabel?.text = "LLConfigColorStyleSolidColors"
                 case .custom:
                     cell.detailTextLabel?.text = "LLConfigColorStyleCustom"
                 }
