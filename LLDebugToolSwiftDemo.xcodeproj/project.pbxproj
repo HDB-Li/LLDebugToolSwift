@@ -36,6 +36,24 @@
 		C481AD25231BDE6A004680C1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C481AD20231BDE69004680C1 /* LICENSE */; };
 		C481AD26231BDE6A004680C1 /* README-cn.md in Resources */ = {isa = PBXBuildFile; fileRef = C481AD21231BDE69004680C1 /* README-cn.md */; };
 		C481AD27231BDE6A004680C1 /* LLDebugToolSwift.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C481AD22231BDE6A004680C1 /* LLDebugToolSwift.podspec */; };
+		C4D3818323F41233006DDDFA /* TestShortCutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3818223F41233006DDDFA /* TestShortCutViewController.swift */; };
+		C4D3819623F44425006DDDFA /* LLDebugTool.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818523F44425006DDDFA /* LLDebugTool.jpeg */; };
+		C4D3819723F44425006DDDFA /* LLDebugTool.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818623F44425006DDDFA /* LLDebugTool.mp3 */; };
+		C4D3819823F44425006DDDFA /* LLDebugTool.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818723F44425006DDDFA /* LLDebugTool.mp4 */; };
+		C4D3819923F44425006DDDFA /* LLDebugTool.doc in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818823F44425006DDDFA /* LLDebugTool.doc */; };
+		C4D3819A23F44425006DDDFA /* LLDebugTool.docx in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818923F44425006DDDFA /* LLDebugTool.docx */; };
+		C4D3819B23F44425006DDDFA /* LLDebugTool.json in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818A23F44425006DDDFA /* LLDebugTool.json */; };
+		C4D3819C23F44425006DDDFA /* LLDebugTool.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818B23F44425006DDDFA /* LLDebugTool.plist */; };
+		C4D3819D23F44425006DDDFA /* LLDebugTool.md in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818C23F44425006DDDFA /* LLDebugTool.md */; };
+		C4D3819E23F44425006DDDFA /* LLDebugTool.gif in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818D23F44425006DDDFA /* LLDebugTool.gif */; };
+		C4D3819F23F44425006DDDFA /* LLDebugTool.pages in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818E23F44425006DDDFA /* LLDebugTool.pages */; };
+		C4D381A023F44425006DDDFA /* LLDebugTool.xls in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818F23F44425006DDDFA /* LLDebugTool.xls */; };
+		C4D381A123F44425006DDDFA /* LLDebugTool.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = C4D3819023F44425006DDDFA /* LLDebugTool.xlsx */; };
+		C4D381A223F44425006DDDFA /* LLDebugTool.txt in Resources */ = {isa = PBXBuildFile; fileRef = C4D3819123F44425006DDDFA /* LLDebugTool.txt */; };
+		C4D381A323F44425006DDDFA /* LLDebugTool.html in Resources */ = {isa = PBXBuildFile; fileRef = C4D3819223F44425006DDDFA /* LLDebugTool.html */; };
+		C4D381A423F44425006DDDFA /* LLDebugTool.numbers in Resources */ = {isa = PBXBuildFile; fileRef = C4D3819323F44425006DDDFA /* LLDebugTool.numbers */; };
+		C4D381A523F44425006DDDFA /* LLDebugTool.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C4D3819423F44425006DDDFA /* LLDebugTool.pdf */; };
+		C4D381A623F44425006DDDFA /* LLDebugTool.png in Resources */ = {isa = PBXBuildFile; fileRef = C4D3819523F44425006DDDFA /* LLDebugTool.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +117,24 @@
 		C481AD20231BDE69004680C1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C481AD21231BDE69004680C1 /* README-cn.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "README-cn.md"; sourceTree = "<group>"; };
 		C481AD22231BDE6A004680C1 /* LLDebugToolSwift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LLDebugToolSwift.podspec; sourceTree = "<group>"; };
+		C4D3818223F41233006DDDFA /* TestShortCutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestShortCutViewController.swift; sourceTree = "<group>"; };
+		C4D3818523F44425006DDDFA /* LLDebugTool.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LLDebugTool.jpeg; sourceTree = "<group>"; };
+		C4D3818623F44425006DDDFA /* LLDebugTool.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LLDebugTool.mp3; sourceTree = "<group>"; };
+		C4D3818723F44425006DDDFA /* LLDebugTool.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LLDebugTool.mp4; sourceTree = "<group>"; };
+		C4D3818823F44425006DDDFA /* LLDebugTool.doc */ = {isa = PBXFileReference; lastKnownFileType = file; path = LLDebugTool.doc; sourceTree = "<group>"; };
+		C4D3818923F44425006DDDFA /* LLDebugTool.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = LLDebugTool.docx; sourceTree = "<group>"; };
+		C4D3818A23F44425006DDDFA /* LLDebugTool.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LLDebugTool.json; sourceTree = "<group>"; };
+		C4D3818B23F44425006DDDFA /* LLDebugTool.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LLDebugTool.plist; sourceTree = "<group>"; };
+		C4D3818C23F44425006DDDFA /* LLDebugTool.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LLDebugTool.md; sourceTree = "<group>"; };
+		C4D3818D23F44425006DDDFA /* LLDebugTool.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = LLDebugTool.gif; sourceTree = "<group>"; };
+		C4D3818E23F44425006DDDFA /* LLDebugTool.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = LLDebugTool.pages; sourceTree = "<group>"; };
+		C4D3818F23F44425006DDDFA /* LLDebugTool.xls */ = {isa = PBXFileReference; lastKnownFileType = file; path = LLDebugTool.xls; sourceTree = "<group>"; };
+		C4D3819023F44425006DDDFA /* LLDebugTool.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = LLDebugTool.xlsx; sourceTree = "<group>"; };
+		C4D3819123F44425006DDDFA /* LLDebugTool.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LLDebugTool.txt; sourceTree = "<group>"; };
+		C4D3819223F44425006DDDFA /* LLDebugTool.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = LLDebugTool.html; sourceTree = "<group>"; };
+		C4D3819323F44425006DDDFA /* LLDebugTool.numbers */ = {isa = PBXFileReference; lastKnownFileType = file; path = LLDebugTool.numbers; sourceTree = "<group>"; };
+		C4D3819423F44425006DDDFA /* LLDebugTool.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = LLDebugTool.pdf; sourceTree = "<group>"; };
+		C4D3819523F44425006DDDFA /* LLDebugTool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LLDebugTool.png; sourceTree = "<group>"; };
 		E45D43AD8FFE9A42E9D1CA87 /* Pods-LLDebugToolSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLDebugToolSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLDebugToolSwiftDemo/Pods-LLDebugToolSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 		FE2985D92B0F6630DB319AC0 /* Pods-LLDebugToolSwiftDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLDebugToolSwiftDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLDebugToolSwiftDemoUITests/Pods-LLDebugToolSwiftDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				367620F9214A6D5500F433EE /* DemoViewControllers */,
+				C4D3818423F44425006DDDFA /* Resource */,
 				364A059F214917E70056719F /* AppDelegate.swift */,
 				364A05A1214917E70056719F /* ViewController.swift */,
 				C4320D40214DFB41000CC110 /* MyService.swift */,
@@ -215,6 +252,7 @@
 				3652EDE923876CD500D5D531 /* TestHtmlViewController.swift */,
 				3652EDEB23876CEA00D5D531 /* CustomWebViewController.swift */,
 				3652EDED23876CF600D5D531 /* TestLocationViewController.swift */,
+				C4D3818223F41233006DDDFA /* TestShortCutViewController.swift */,
 			);
 			path = DemoViewControllers;
 			sourceTree = "<group>";
@@ -227,6 +265,30 @@
 				48CCDFFC351EDFC7025E3FFD /* Pods_LLDebugToolSwiftDemoUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4D3818423F44425006DDDFA /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C4D3818523F44425006DDDFA /* LLDebugTool.jpeg */,
+				C4D3818623F44425006DDDFA /* LLDebugTool.mp3 */,
+				C4D3818723F44425006DDDFA /* LLDebugTool.mp4 */,
+				C4D3818823F44425006DDDFA /* LLDebugTool.doc */,
+				C4D3818923F44425006DDDFA /* LLDebugTool.docx */,
+				C4D3818A23F44425006DDDFA /* LLDebugTool.json */,
+				C4D3818B23F44425006DDDFA /* LLDebugTool.plist */,
+				C4D3818C23F44425006DDDFA /* LLDebugTool.md */,
+				C4D3818D23F44425006DDDFA /* LLDebugTool.gif */,
+				C4D3818E23F44425006DDDFA /* LLDebugTool.pages */,
+				C4D3818F23F44425006DDDFA /* LLDebugTool.xls */,
+				C4D3819023F44425006DDDFA /* LLDebugTool.xlsx */,
+				C4D3819123F44425006DDDFA /* LLDebugTool.txt */,
+				C4D3819223F44425006DDDFA /* LLDebugTool.html */,
+				C4D3819323F44425006DDDFA /* LLDebugTool.numbers */,
+				C4D3819423F44425006DDDFA /* LLDebugTool.pdf */,
+				C4D3819523F44425006DDDFA /* LLDebugTool.png */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		CC6BE5CE747316EEBA2803DE /* Pods */ = {
@@ -353,16 +415,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D381A123F44425006DDDFA /* LLDebugTool.xlsx in Resources */,
 				C481AD27231BDE6A004680C1 /* LLDebugToolSwift.podspec in Resources */,
+				C4D381A523F44425006DDDFA /* LLDebugTool.pdf in Resources */,
 				364A05AA214917E70056719F /* LaunchScreen.storyboard in Resources */,
+				C4D3819723F44425006DDDFA /* LLDebugTool.mp3 in Resources */,
 				C481AD23231BDE6A004680C1 /* CHANGELOG.md in Resources */,
+				C4D3819F23F44425006DDDFA /* LLDebugTool.pages in Resources */,
+				C4D381A423F44425006DDDFA /* LLDebugTool.numbers in Resources */,
+				C4D381A023F44425006DDDFA /* LLDebugTool.xls in Resources */,
+				C4D3819D23F44425006DDDFA /* LLDebugTool.md in Resources */,
+				C4D3819923F44425006DDDFA /* LLDebugTool.doc in Resources */,
+				C4D3819B23F44425006DDDFA /* LLDebugTool.json in Resources */,
+				C4D3819623F44425006DDDFA /* LLDebugTool.jpeg in Resources */,
+				C4D381A223F44425006DDDFA /* LLDebugTool.txt in Resources */,
 				C481AD25231BDE6A004680C1 /* LICENSE in Resources */,
+				C4D3819E23F44425006DDDFA /* LLDebugTool.gif in Resources */,
 				C481AD26231BDE6A004680C1 /* README-cn.md in Resources */,
 				367620F5214A648200F433EE /* Localizable.strings in Resources */,
+				C4D381A323F44425006DDDFA /* LLDebugTool.html in Resources */,
 				C481AD24231BDE6A004680C1 /* README.md in Resources */,
 				364A05A7214917E70056719F /* Assets.xcassets in Resources */,
 				364A05A5214917E70056719F /* Main.storyboard in Resources */,
 				367620EF214A63B500F433EE /* InfoPlist.strings in Resources */,
+				C4D381A623F44425006DDDFA /* LLDebugTool.png in Resources */,
+				C4D3819A23F44425006DDDFA /* LLDebugTool.docx in Resources */,
+				C4D3819C23F44425006DDDFA /* LLDebugTool.plist in Resources */,
+				C4D3819823F44425006DDDFA /* LLDebugTool.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +561,7 @@
 				3652EDEA23876CD500D5D531 /* TestHtmlViewController.swift in Sources */,
 				364A05D2214922EF0056719F /* LLog.swift in Sources */,
 				367620FB214A6D6400F433EE /* BaseTestViewController.swift in Sources */,
+				C4D3818323F41233006DDDFA /* TestShortCutViewController.swift in Sources */,
 				364A05A2214917E70056719F /* ViewController.swift in Sources */,
 				364A05A0214917E70056719F /* AppDelegate.swift in Sources */,
 			);
@@ -683,7 +763,7 @@
 				INFOPLIST_FILE = LLDebugToolSwiftDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.3.7.1;
+				MARKETING_VERSION = 1.3.8;
 				PRODUCT_BUNDLE_IDENTIFIER = myCompany.HDB.LLDebugToolSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -701,7 +781,7 @@
 				INFOPLIST_FILE = LLDebugToolSwiftDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.3.7.1;
+				MARKETING_VERSION = 1.3.8;
 				PRODUCT_BUNDLE_IDENTIFIER = myCompany.HDB.LLDebugToolSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

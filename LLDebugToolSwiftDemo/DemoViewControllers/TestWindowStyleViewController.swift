@@ -39,16 +39,12 @@ class TestWindowStyleViewController: BaseTestViewController {
         } else if (indexPath.row == 3) {
             cell.textLabel?.text = "Use \"Trailing\""
             cell.accessoryType = LLConfig.shared().entryWindowStyle == .trailing ? .checkmark : .none
-        } else {
-            if #available(iOS 13.0, *) {
-                if (indexPath.row == 4) {
-                    cell.textLabel?.text = "Use \"NetBar\""
-                    cell.accessoryType = LLConfig.shared().entryWindowStyle == .netBar ? .checkmark : .none
-                } else if (indexPath.row == 5) {
-                    cell.textLabel?.text = "Use \"PowerBar\""
-                    cell.accessoryType = LLConfig.shared().entryWindowStyle == .powerBar ? .checkmark : .none
-                }
-            }
+        } else if (indexPath.row == 4) {
+            cell.textLabel?.text = "Use \"NetBar\""
+            cell.accessoryType = LLConfig.shared().entryWindowStyle == .netBar ? .checkmark : .none
+        } else if (indexPath.row == 5) {
+            cell.textLabel?.text = "Use \"PowerBar\""
+            cell.accessoryType = LLConfig.shared().entryWindowStyle == .powerBar ? .checkmark : .none
         }
         return cell
     }
@@ -88,19 +84,11 @@ class TestWindowStyleViewController: BaseTestViewController {
     }
     
     func testPowerBarWindowStyle() {
-        if #available(iOS 13.0, *) {
-            LLConfig.shared().entryWindowStyle = .powerBar
-        } else {
-            LLConfig.shared().entryWindowStyle = .powerBar
-        }
+        LLConfig.shared().entryWindowStyle = .powerBar
     }
     
     func testNetBarWindowStyle() {
-        if #available(iOS 13.0, *) {
-            LLConfig.shared().entryWindowStyle = .netBar
-        } else {
-            LLConfig.shared().entryWindowStyle = .netBar
-        }
+        LLConfig.shared().entryWindowStyle = .netBar
     }
     
 }

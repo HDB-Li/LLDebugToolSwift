@@ -51,6 +51,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             //####################### Html #######################//
             config.defaultHtmlUrl = "https://github.com/HDB-Li/LLDebugTool";
+            
+            //####################### Location #######################//
+            if let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first {
+                config.addMockRouteDirectory(documentsPath)
+            }
         }
         
         return true

@@ -40,19 +40,40 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imgView.tag = 101
-        
+        // LLDebugTool need time to start.
+        sleep(1)
+        doSomeActions()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    // MARK: - Primary
+    private func doSomeActions() {
+        requestPhotoAuthorization()
+        requestLocationAuthorization()
+        doSandboxIfNeeded()
+        doCrashIfNeeded()
+        doNetwork()
+        doLog()
+    }
+    
+    private func requestPhotoAuthorization() {
         // Try to get album permission, and if possible, screenshots are stored in the album at the same time.
         PHPhotoLibrary.requestAuthorization { (status) in
             
         }
-        
+    }
+    
+    private func requestLocationAuthorization() {
+        // Try to get location permission, and if possible, mock location will get your current location.
         locationManager = CLLocationManager()
         locationManager.requestWhenInUseAuthorization()
-        
-        // LLDebugTool need time to start.
-        sleep(1)
-        
+    }
+    
+    private func doCrashIfNeeded() {
         if UserDefaults.standard.bool(forKey: "openCrash") {
             UserDefaults.standard.set(false, forKey: "openCrash")
             UserDefaults.standard.synchronize()
@@ -60,7 +81,35 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
                 LLDebugTool.shared().execute(.crash)
             }
         }
-        
+    }
+    
+    private func doSandboxIfNeeded() {
+        DispatchQueue.global().async {
+            let extensions = ["html", "pdf", "docx", "doc", "pages", "txt", "md", "xlsx", "xls", "numbers", "json", "plist", "jpeg", "png", "mp4", "mp3", "gif"]
+            for ext in extensions {
+                self.copyFileWithExtensionIfNeeded(ext: ext)
+            }
+        }
+    }
+    
+    private func copyFileWithExtensionIfNeeded(ext : String) {
+        if ext.count == 0 {
+            return
+        }
+        let manager = FileManager.default
+        guard let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else { return }
+        let targetPath = documentsPath + "/LLDebugTool." + ext
+        if !manager.fileExists(atPath: targetPath) {
+            guard let path = Bundle.main.path(forResource: "LLDebugTool", ofType: ext) else { return }
+            do {
+                try manager.copyItem(atPath: path, toPath: targetPath)
+            } catch {
+                print("Copy resource failed")
+            }
+        }
+    }
+    
+    private func doNetwork() {
         //Network Request
         var urlRequest = URLRequest(url: URL(string: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525346881086&di=b234c66c82427034962131d20e9f6b56&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F011cf15548caf50000019ae9c5c728.jpg%402o.jpg")!)
         urlRequest.httpMethod = "GET"
@@ -72,14 +121,14 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
                 }
             }
         }
-
+        
         // Json Response
         Alamofire.request("http://baike.baidu.com/api/openapi/BaikeLemmaCardApi?&format=json&appid=379020&bk_key=%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85&bk_length=600").responseJSON { (response) in
-
+            
         }
         
         //NSURLSession
-        var htmlRequest = URLRequest(url: URL(string: "https://cocoapods.org/pods/LLDebugTool")!)
+        var htmlRequest = URLRequest(url: URL(string: "https://cocoapods.org/pods/LLDebugToolSwift")!)
         htmlRequest.httpMethod = "GET"
         let dataTask = URLSession.shared.dataTask(with: htmlRequest) { (data, response, error) in
             // Not important. Just check to see if the current Demo version is consistent with the latest version.
@@ -105,16 +154,15 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             }
         }
         dataTask.resume()
-        
+    }
+    
+    private func doLog() {
         // Log.
         // NSLocalizedString is used for multiple languages.
         // You can just use as LLog.log(@"What you want to pring").
         LLog.log(message: NSLocalizedString("initial.log", comment: ""))
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true
+        
+        LLog.alertLog(message: NSLocalizedString("initial.log", comment: ""), event: "Demo")
     }
     
     // MARK: - Actions
@@ -182,9 +230,14 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    private func testShortCut() {
+        let vc = TestShortCutViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     // MARK: - UITableView
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 13
+        return 14
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -286,6 +339,9 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         } else if (indexPath.section == 12) {
             cell.textLabel?.text = NSLocalizedString("test.location", comment: "")
             cell.accessoryType = .disclosureIndicator
+        } else if (indexPath.section == 13) {
+            cell.textLabel?.text = NSLocalizedString("test.short.cut", comment: "")
+            cell.accessoryType = .disclosureIndicator
         }
         return cell
     }
@@ -321,6 +377,8 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             testHtml()
         } else if (indexPath.section == 12) {
             testLocation()
+        } else if (indexPath.section == 13) {
+            testShortCut()
         }
         self.tableView.reloadData()
     }
@@ -352,8 +410,14 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
             return "Html"
         } else if (section == 12) {
             return "Location"
+        } else if (section == 13) {
+            return "Short Cut"
         }
         return nil
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
     }
 }
 
