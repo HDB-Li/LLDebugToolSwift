@@ -85,7 +85,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     
     private func doSandboxIfNeeded() {
         DispatchQueue.global().async {
-            let extensions = ["html", "pdf", "docx", "doc", "pages", "txt", "md", "xlsx", "xls", "numbers", "json", "plist", "jpeg", "png", "mp4", "mp3", "gif"]
+            let extensions = ["gif", "html", "jpg", "json", "md", "mp3", "mp4", "pdf", "plist", "png", "txt"]
             for ext in extensions {
                 self.copyFileWithExtensionIfNeeded(ext: ext)
             }
@@ -128,30 +128,10 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         }
         
         //NSURLSession
-        var htmlRequest = URLRequest(url: URL(string: "https://cocoapods.org/pods/LLDebugToolSwift")!)
+        var htmlRequest = URLRequest(url: URL(string: "https://www.baidu.com")!)
         htmlRequest.httpMethod = "GET"
         let dataTask = URLSession.shared.dataTask(with: htmlRequest) { (data, response, error) in
-            // Not important. Just check to see if the current Demo version is consistent with the latest version.
-            // 只是检查一下当前Demo版本和最新版本是否一致，不一致就提示一下新版本。
-            if error == nil && data != nil {
-                let htmlString = String(data: data!, encoding: String.Encoding.utf8)
-                let array = htmlString?.components(separatedBy: "http://cocoadocs.org/docsets/LLDebugToolSwift/")
-                if array != nil && array!.count > 2 {
-                    let str = array![1]
-                    let array2 = str.components(separatedBy: "/preview.png")
-                    if array2.count >= 2 {
-                        let newVersion = array2[0]
-                        if newVersion.components(separatedBy: ".").count == 3 {
-                            if LLDebugTool.version().compare(newVersion) == .orderedAscending {
-                                let vc = UIAlertController(title: "Note", message: String(format: "%@\nNew Version : %@\nCurrent Version : %@", arguments: [NSLocalizedString("new.version", comment: ""),newVersion,LLDebugTool.version()]), preferredStyle: .alert)
-                                let action = UIAlertAction(title: "I known", style: .default, handler: nil)
-                                vc.addAction(action)
-                                self.present(vc, animated: true, completion: nil)
-                            }
-                        }
-                    }
-                }
-            }
+            
         }
         dataTask.resume()
     }

@@ -3,51 +3,51 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
-  - LLDebugTool (1.3.8):
-    - LLDebugTool/AppInfo (= 1.3.8)
-    - LLDebugTool/Core (= 1.3.8)
-    - LLDebugTool/Crash (= 1.3.8)
-    - LLDebugTool/Hierarchy (= 1.3.8)
-    - LLDebugTool/Html (= 1.3.8)
-    - LLDebugTool/Location (= 1.3.8)
-    - LLDebugTool/Log (= 1.3.8)
-    - LLDebugTool/Magnifier (= 1.3.8)
-    - LLDebugTool/Network (= 1.3.8)
-    - LLDebugTool/Ruler (= 1.3.8)
-    - LLDebugTool/Sandbox (= 1.3.8)
-    - LLDebugTool/Screenshot (= 1.3.8)
-    - LLDebugTool/ShortCut (= 1.3.8)
-    - LLDebugTool/Storage (= 1.3.8)
-    - LLDebugTool/WidgetBorder (= 1.3.8)
-  - LLDebugTool/AppInfo (1.3.8):
+  - LLDebugTool (1.3.8.1):
+    - LLDebugTool/AppInfo (= 1.3.8.1)
+    - LLDebugTool/Core (= 1.3.8.1)
+    - LLDebugTool/Crash (= 1.3.8.1)
+    - LLDebugTool/Hierarchy (= 1.3.8.1)
+    - LLDebugTool/Html (= 1.3.8.1)
+    - LLDebugTool/Location (= 1.3.8.1)
+    - LLDebugTool/Log (= 1.3.8.1)
+    - LLDebugTool/Magnifier (= 1.3.8.1)
+    - LLDebugTool/Network (= 1.3.8.1)
+    - LLDebugTool/Ruler (= 1.3.8.1)
+    - LLDebugTool/Sandbox (= 1.3.8.1)
+    - LLDebugTool/Screenshot (= 1.3.8.1)
+    - LLDebugTool/ShortCut (= 1.3.8.1)
+    - LLDebugTool/Storage (= 1.3.8.1)
+    - LLDebugTool/WidgetBorder (= 1.3.8.1)
+  - LLDebugTool/AppInfo (1.3.8.1):
     - LLDebugTool/Core
-  - LLDebugTool/Core (1.3.8)
-  - LLDebugTool/Crash (1.3.8):
+  - LLDebugTool/Core (1.3.8.1)
+  - LLDebugTool/Crash (1.3.8.1):
     - LLDebugTool/Storage
-  - LLDebugTool/Hierarchy (1.3.8):
+  - LLDebugTool/Hierarchy (1.3.8.1):
     - LLDebugTool/Core
-  - LLDebugTool/Html (1.3.8):
+  - LLDebugTool/Html (1.3.8.1):
     - LLDebugTool/Core
-  - LLDebugTool/Location (1.3.8):
+  - LLDebugTool/Location (1.3.8.1):
     - LLDebugTool/Core
-  - LLDebugTool/Log (1.3.8):
+  - LLDebugTool/Log (1.3.8.1):
     - LLDebugTool/Storage
-  - LLDebugTool/Magnifier (1.3.8):
+  - LLDebugTool/Magnifier (1.3.8.1):
     - LLDebugTool/Core
-  - LLDebugTool/Network (1.3.8):
+  - LLDebugTool/Network (1.3.8.1):
     - LLDebugTool/Storage
-  - LLDebugTool/Ruler (1.3.8):
+  - LLDebugTool/Ruler (1.3.8.1):
     - LLDebugTool/Core
-  - LLDebugTool/Sandbox (1.3.8):
+  - LLDebugTool/Sandbox (1.3.8.1):
     - LLDebugTool/Core
-  - LLDebugTool/Screenshot (1.3.8):
+  - LLDebugTool/Screenshot (1.3.8.1):
     - LLDebugTool/Core
-  - LLDebugTool/ShortCut (1.3.8):
+  - LLDebugTool/ShortCut (1.3.8.1):
     - LLDebugTool/Core
-  - LLDebugTool/Storage (1.3.8):
+  - LLDebugTool/Storage (1.3.8.1):
     - FMDB (~> 2.0)
     - LLDebugTool/Core
-  - LLDebugTool/WidgetBorder (1.3.8):
+  - LLDebugTool/WidgetBorder (1.3.8.1):
     - LLDebugTool/Core
   - Moya (11.0.2):
     - Moya/Core (= 11.0.2)
@@ -58,7 +58,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (= 4.7.3)
-  - LLDebugTool (= 1.3.8)
+  - LLDebugTool (= 1.3.8.1)
   - Moya (= 11.0.2)
 
 SPEC REPOS:
@@ -72,10 +72,10 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  LLDebugTool: 9d53ccea0f70491c50b47dcd71493f9d2ce3bbb2
+  LLDebugTool: 6026a1df690f5f94524567fce7f97fa53ce131d8
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
 
-PODFILE CHECKSUM: a8b0e59a218097f83f7071a690abc10f21b6efb1
+PODFILE CHECKSUM: 67bc3822629516784e4eeb32072a8a5f96c5543a
 
 COCOAPODS: 1.8.4

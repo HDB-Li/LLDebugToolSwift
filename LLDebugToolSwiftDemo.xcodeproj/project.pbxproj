@@ -36,24 +36,18 @@
 		C481AD25231BDE6A004680C1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C481AD20231BDE69004680C1 /* LICENSE */; };
 		C481AD26231BDE6A004680C1 /* README-cn.md in Resources */ = {isa = PBXBuildFile; fileRef = C481AD21231BDE69004680C1 /* README-cn.md */; };
 		C481AD27231BDE6A004680C1 /* LLDebugToolSwift.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C481AD22231BDE6A004680C1 /* LLDebugToolSwift.podspec */; };
+		C4C4F83E248D3A6C00558753 /* LLDebugTool.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4C4F833248D3A6B00558753 /* LLDebugTool.mp3 */; };
+		C4C4F83F248D3A6C00558753 /* LLDebugTool.png in Resources */ = {isa = PBXBuildFile; fileRef = C4C4F834248D3A6B00558753 /* LLDebugTool.png */; };
+		C4C4F840248D3A6C00558753 /* LLDebugTool.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4C4F835248D3A6B00558753 /* LLDebugTool.mp4 */; };
+		C4C4F841248D3A6C00558753 /* LLDebugTool.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4C4F836248D3A6B00558753 /* LLDebugTool.jpg */; };
+		C4C4F842248D3A6C00558753 /* LLDebugTool.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4C4F837248D3A6B00558753 /* LLDebugTool.plist */; };
+		C4C4F843248D3A6C00558753 /* LLDebugTool.txt in Resources */ = {isa = PBXBuildFile; fileRef = C4C4F838248D3A6B00558753 /* LLDebugTool.txt */; };
+		C4C4F844248D3A6C00558753 /* LLDebugTool.md in Resources */ = {isa = PBXBuildFile; fileRef = C4C4F839248D3A6B00558753 /* LLDebugTool.md */; };
+		C4C4F845248D3A6C00558753 /* LLDebugTool.json in Resources */ = {isa = PBXBuildFile; fileRef = C4C4F83A248D3A6B00558753 /* LLDebugTool.json */; };
+		C4C4F846248D3A6C00558753 /* LLDebugTool.gif in Resources */ = {isa = PBXBuildFile; fileRef = C4C4F83B248D3A6B00558753 /* LLDebugTool.gif */; };
+		C4C4F847248D3A6C00558753 /* LLDebugTool.html in Resources */ = {isa = PBXBuildFile; fileRef = C4C4F83C248D3A6C00558753 /* LLDebugTool.html */; };
+		C4C4F848248D3A6C00558753 /* LLDebugTool.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C4C4F83D248D3A6C00558753 /* LLDebugTool.pdf */; };
 		C4D3818323F41233006DDDFA /* TestShortCutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3818223F41233006DDDFA /* TestShortCutViewController.swift */; };
-		C4D3819623F44425006DDDFA /* LLDebugTool.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818523F44425006DDDFA /* LLDebugTool.jpeg */; };
-		C4D3819723F44425006DDDFA /* LLDebugTool.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818623F44425006DDDFA /* LLDebugTool.mp3 */; };
-		C4D3819823F44425006DDDFA /* LLDebugTool.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818723F44425006DDDFA /* LLDebugTool.mp4 */; };
-		C4D3819923F44425006DDDFA /* LLDebugTool.doc in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818823F44425006DDDFA /* LLDebugTool.doc */; };
-		C4D3819A23F44425006DDDFA /* LLDebugTool.docx in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818923F44425006DDDFA /* LLDebugTool.docx */; };
-		C4D3819B23F44425006DDDFA /* LLDebugTool.json in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818A23F44425006DDDFA /* LLDebugTool.json */; };
-		C4D3819C23F44425006DDDFA /* LLDebugTool.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818B23F44425006DDDFA /* LLDebugTool.plist */; };
-		C4D3819D23F44425006DDDFA /* LLDebugTool.md in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818C23F44425006DDDFA /* LLDebugTool.md */; };
-		C4D3819E23F44425006DDDFA /* LLDebugTool.gif in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818D23F44425006DDDFA /* LLDebugTool.gif */; };
-		C4D3819F23F44425006DDDFA /* LLDebugTool.pages in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818E23F44425006DDDFA /* LLDebugTool.pages */; };
-		C4D381A023F44425006DDDFA /* LLDebugTool.xls in Resources */ = {isa = PBXBuildFile; fileRef = C4D3818F23F44425006DDDFA /* LLDebugTool.xls */; };
-		C4D381A123F44425006DDDFA /* LLDebugTool.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = C4D3819023F44425006DDDFA /* LLDebugTool.xlsx */; };
-		C4D381A223F44425006DDDFA /* LLDebugTool.txt in Resources */ = {isa = PBXBuildFile; fileRef = C4D3819123F44425006DDDFA /* LLDebugTool.txt */; };
-		C4D381A323F44425006DDDFA /* LLDebugTool.html in Resources */ = {isa = PBXBuildFile; fileRef = C4D3819223F44425006DDDFA /* LLDebugTool.html */; };
-		C4D381A423F44425006DDDFA /* LLDebugTool.numbers in Resources */ = {isa = PBXBuildFile; fileRef = C4D3819323F44425006DDDFA /* LLDebugTool.numbers */; };
-		C4D381A523F44425006DDDFA /* LLDebugTool.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C4D3819423F44425006DDDFA /* LLDebugTool.pdf */; };
-		C4D381A623F44425006DDDFA /* LLDebugTool.png in Resources */ = {isa = PBXBuildFile; fileRef = C4D3819523F44425006DDDFA /* LLDebugTool.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,24 +111,18 @@
 		C481AD20231BDE69004680C1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C481AD21231BDE69004680C1 /* README-cn.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "README-cn.md"; sourceTree = "<group>"; };
 		C481AD22231BDE6A004680C1 /* LLDebugToolSwift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LLDebugToolSwift.podspec; sourceTree = "<group>"; };
+		C4C4F833248D3A6B00558753 /* LLDebugTool.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LLDebugTool.mp3; sourceTree = "<group>"; };
+		C4C4F834248D3A6B00558753 /* LLDebugTool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LLDebugTool.png; sourceTree = "<group>"; };
+		C4C4F835248D3A6B00558753 /* LLDebugTool.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LLDebugTool.mp4; sourceTree = "<group>"; };
+		C4C4F836248D3A6B00558753 /* LLDebugTool.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LLDebugTool.jpg; sourceTree = "<group>"; };
+		C4C4F837248D3A6B00558753 /* LLDebugTool.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LLDebugTool.plist; sourceTree = "<group>"; };
+		C4C4F838248D3A6B00558753 /* LLDebugTool.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LLDebugTool.txt; sourceTree = "<group>"; };
+		C4C4F839248D3A6B00558753 /* LLDebugTool.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LLDebugTool.md; sourceTree = "<group>"; };
+		C4C4F83A248D3A6B00558753 /* LLDebugTool.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LLDebugTool.json; sourceTree = "<group>"; };
+		C4C4F83B248D3A6B00558753 /* LLDebugTool.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = LLDebugTool.gif; sourceTree = "<group>"; };
+		C4C4F83C248D3A6C00558753 /* LLDebugTool.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = LLDebugTool.html; sourceTree = "<group>"; };
+		C4C4F83D248D3A6C00558753 /* LLDebugTool.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = LLDebugTool.pdf; sourceTree = "<group>"; };
 		C4D3818223F41233006DDDFA /* TestShortCutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestShortCutViewController.swift; sourceTree = "<group>"; };
-		C4D3818523F44425006DDDFA /* LLDebugTool.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LLDebugTool.jpeg; sourceTree = "<group>"; };
-		C4D3818623F44425006DDDFA /* LLDebugTool.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LLDebugTool.mp3; sourceTree = "<group>"; };
-		C4D3818723F44425006DDDFA /* LLDebugTool.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LLDebugTool.mp4; sourceTree = "<group>"; };
-		C4D3818823F44425006DDDFA /* LLDebugTool.doc */ = {isa = PBXFileReference; lastKnownFileType = file; path = LLDebugTool.doc; sourceTree = "<group>"; };
-		C4D3818923F44425006DDDFA /* LLDebugTool.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = LLDebugTool.docx; sourceTree = "<group>"; };
-		C4D3818A23F44425006DDDFA /* LLDebugTool.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LLDebugTool.json; sourceTree = "<group>"; };
-		C4D3818B23F44425006DDDFA /* LLDebugTool.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LLDebugTool.plist; sourceTree = "<group>"; };
-		C4D3818C23F44425006DDDFA /* LLDebugTool.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LLDebugTool.md; sourceTree = "<group>"; };
-		C4D3818D23F44425006DDDFA /* LLDebugTool.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = LLDebugTool.gif; sourceTree = "<group>"; };
-		C4D3818E23F44425006DDDFA /* LLDebugTool.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = LLDebugTool.pages; sourceTree = "<group>"; };
-		C4D3818F23F44425006DDDFA /* LLDebugTool.xls */ = {isa = PBXFileReference; lastKnownFileType = file; path = LLDebugTool.xls; sourceTree = "<group>"; };
-		C4D3819023F44425006DDDFA /* LLDebugTool.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = LLDebugTool.xlsx; sourceTree = "<group>"; };
-		C4D3819123F44425006DDDFA /* LLDebugTool.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LLDebugTool.txt; sourceTree = "<group>"; };
-		C4D3819223F44425006DDDFA /* LLDebugTool.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = LLDebugTool.html; sourceTree = "<group>"; };
-		C4D3819323F44425006DDDFA /* LLDebugTool.numbers */ = {isa = PBXFileReference; lastKnownFileType = file; path = LLDebugTool.numbers; sourceTree = "<group>"; };
-		C4D3819423F44425006DDDFA /* LLDebugTool.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = LLDebugTool.pdf; sourceTree = "<group>"; };
-		C4D3819523F44425006DDDFA /* LLDebugTool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LLDebugTool.png; sourceTree = "<group>"; };
 		E45D43AD8FFE9A42E9D1CA87 /* Pods-LLDebugToolSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLDebugToolSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLDebugToolSwiftDemo/Pods-LLDebugToolSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 		FE2985D92B0F6630DB319AC0 /* Pods-LLDebugToolSwiftDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLDebugToolSwiftDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLDebugToolSwiftDemoUITests/Pods-LLDebugToolSwiftDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -270,23 +258,17 @@
 		C4D3818423F44425006DDDFA /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				C4D3818523F44425006DDDFA /* LLDebugTool.jpeg */,
-				C4D3818623F44425006DDDFA /* LLDebugTool.mp3 */,
-				C4D3818723F44425006DDDFA /* LLDebugTool.mp4 */,
-				C4D3818823F44425006DDDFA /* LLDebugTool.doc */,
-				C4D3818923F44425006DDDFA /* LLDebugTool.docx */,
-				C4D3818A23F44425006DDDFA /* LLDebugTool.json */,
-				C4D3818B23F44425006DDDFA /* LLDebugTool.plist */,
-				C4D3818C23F44425006DDDFA /* LLDebugTool.md */,
-				C4D3818D23F44425006DDDFA /* LLDebugTool.gif */,
-				C4D3818E23F44425006DDDFA /* LLDebugTool.pages */,
-				C4D3818F23F44425006DDDFA /* LLDebugTool.xls */,
-				C4D3819023F44425006DDDFA /* LLDebugTool.xlsx */,
-				C4D3819123F44425006DDDFA /* LLDebugTool.txt */,
-				C4D3819223F44425006DDDFA /* LLDebugTool.html */,
-				C4D3819323F44425006DDDFA /* LLDebugTool.numbers */,
-				C4D3819423F44425006DDDFA /* LLDebugTool.pdf */,
-				C4D3819523F44425006DDDFA /* LLDebugTool.png */,
+				C4C4F83B248D3A6B00558753 /* LLDebugTool.gif */,
+				C4C4F83C248D3A6C00558753 /* LLDebugTool.html */,
+				C4C4F836248D3A6B00558753 /* LLDebugTool.jpg */,
+				C4C4F83A248D3A6B00558753 /* LLDebugTool.json */,
+				C4C4F839248D3A6B00558753 /* LLDebugTool.md */,
+				C4C4F833248D3A6B00558753 /* LLDebugTool.mp3 */,
+				C4C4F835248D3A6B00558753 /* LLDebugTool.mp4 */,
+				C4C4F83D248D3A6C00558753 /* LLDebugTool.pdf */,
+				C4C4F837248D3A6B00558753 /* LLDebugTool.plist */,
+				C4C4F834248D3A6B00558753 /* LLDebugTool.png */,
+				C4C4F838248D3A6B00558753 /* LLDebugTool.txt */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -415,33 +397,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4D381A123F44425006DDDFA /* LLDebugTool.xlsx in Resources */,
 				C481AD27231BDE6A004680C1 /* LLDebugToolSwift.podspec in Resources */,
-				C4D381A523F44425006DDDFA /* LLDebugTool.pdf in Resources */,
 				364A05AA214917E70056719F /* LaunchScreen.storyboard in Resources */,
-				C4D3819723F44425006DDDFA /* LLDebugTool.mp3 in Resources */,
 				C481AD23231BDE6A004680C1 /* CHANGELOG.md in Resources */,
-				C4D3819F23F44425006DDDFA /* LLDebugTool.pages in Resources */,
-				C4D381A423F44425006DDDFA /* LLDebugTool.numbers in Resources */,
-				C4D381A023F44425006DDDFA /* LLDebugTool.xls in Resources */,
-				C4D3819D23F44425006DDDFA /* LLDebugTool.md in Resources */,
-				C4D3819923F44425006DDDFA /* LLDebugTool.doc in Resources */,
-				C4D3819B23F44425006DDDFA /* LLDebugTool.json in Resources */,
-				C4D3819623F44425006DDDFA /* LLDebugTool.jpeg in Resources */,
-				C4D381A223F44425006DDDFA /* LLDebugTool.txt in Resources */,
+				C4C4F83E248D3A6C00558753 /* LLDebugTool.mp3 in Resources */,
 				C481AD25231BDE6A004680C1 /* LICENSE in Resources */,
-				C4D3819E23F44425006DDDFA /* LLDebugTool.gif in Resources */,
 				C481AD26231BDE6A004680C1 /* README-cn.md in Resources */,
+				C4C4F844248D3A6C00558753 /* LLDebugTool.md in Resources */,
 				367620F5214A648200F433EE /* Localizable.strings in Resources */,
-				C4D381A323F44425006DDDFA /* LLDebugTool.html in Resources */,
+				C4C4F847248D3A6C00558753 /* LLDebugTool.html in Resources */,
+				C4C4F841248D3A6C00558753 /* LLDebugTool.jpg in Resources */,
+				C4C4F846248D3A6C00558753 /* LLDebugTool.gif in Resources */,
 				C481AD24231BDE6A004680C1 /* README.md in Resources */,
+				C4C4F842248D3A6C00558753 /* LLDebugTool.plist in Resources */,
+				C4C4F843248D3A6C00558753 /* LLDebugTool.txt in Resources */,
 				364A05A7214917E70056719F /* Assets.xcassets in Resources */,
+				C4C4F845248D3A6C00558753 /* LLDebugTool.json in Resources */,
 				364A05A5214917E70056719F /* Main.storyboard in Resources */,
+				C4C4F848248D3A6C00558753 /* LLDebugTool.pdf in Resources */,
 				367620EF214A63B500F433EE /* InfoPlist.strings in Resources */,
-				C4D381A623F44425006DDDFA /* LLDebugTool.png in Resources */,
-				C4D3819A23F44425006DDDFA /* LLDebugTool.docx in Resources */,
-				C4D3819C23F44425006DDDFA /* LLDebugTool.plist in Resources */,
-				C4D3819823F44425006DDDFA /* LLDebugTool.mp4 in Resources */,
+				C4C4F83F248D3A6C00558753 /* LLDebugTool.png in Resources */,
+				C4C4F840248D3A6C00558753 /* LLDebugTool.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
